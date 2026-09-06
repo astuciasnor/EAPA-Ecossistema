@@ -287,7 +287,7 @@ false` (mostram só o código) e o resultado entra como **imagem estática**. Mo
 do EAPADados já instalado. O `read_state()` do geobr **precisa do argumento `year`**
 (ex.: `year = 2020`) — sem ele, dá erro de "argumento de comprimento zero".
 
-**Guia do menu Mapas:** o arquivo `APOIO/mapas.md` (raiz do projeto) é a especificação
+**Guia do menu Mapas:** o arquivo `APOIO/mapas.md` (na pasta de apoio) é a especificação
 canônica do menu **Mapas**. Escopo **v1 (set/2026) = 3 mapas estáticos** (`ggplot`/PNG):
 **Coroplético · Pontos/estações · Bolhas proporcionais**. Organizam-se por propósito:
 **analisar quantidades** (coroplético, bolhas) e **apoiar a amostragem** de pontos de

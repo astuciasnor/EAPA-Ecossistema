@@ -1,0 +1,41 @@
+<Configuration>
+  <!--
+    Windows Sandbox para testar a instalacao da CatalyseR do zero.
+    Clique duas vezes neste arquivo.
+
+    O que ele monta dentro do Sandbox, na Area de Trabalho:
+
+      transferencia  (SOMENTE LEITURA) - o ZIP do pacote e o LEIA-ME.
+                     Somente leitura de proposito: o teste nao pode
+                     corromper o artefato que voce vai levar para a VM.
+
+      saida          (leitura e escrita) - grave aqui os logs que quiser
+                     preservar. E a unica coisa que sobrevive ao fechar
+                     a janela; todo o resto e descartado.
+
+    Tudo o que voce instalar dentro do Sandbox (R, RStudio, Quarto, pacotes)
+    some quando a janela fecha. E esse o objetivo: maquina virgem toda vez.
+  -->
+
+  <MappedFolders>
+    <MappedFolder>
+      <HostFolder>D:\Claude\EAPA-Ecossistema\APOIO\transferencia-vm</HostFolder>
+      <SandboxFolder>C:\Users\WDAGUtilityAccount\Desktop\transferencia</SandboxFolder>
+      <ReadOnly>true</ReadOnly>
+    </MappedFolder>
+    <MappedFolder>
+      <HostFolder>D:\Claude\EAPA-Ecossistema\APOIO\saida-sandbox</HostFolder>
+      <SandboxFolder>C:\Users\WDAGUtilityAccount\Desktop\saida</SandboxFolder>
+      <ReadOnly>false</ReadOnly>
+    </MappedFolder>
+  </MappedFolders>
+
+  <Networking>Enable</Networking>
+  <VGpu>Disable</VGpu>
+
+  <!--
+    Descomente e ajuste se quiser limitar a memoria dada ao Sandbox.
+    Sem esta linha, o Windows decide sozinho.
+  -->
+  <!-- <MemoryInMB>8192</MemoryInMB> -->
+</Configuration>

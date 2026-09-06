@@ -1,0 +1,1116 @@
+---
+title: "Brook Trout Mercury Temperature-Ration Experiments"
+author: "Matt Fuller"
+date: "25 July 2025"
+output:
+  html_document:
+    toc: true
+    number_sections: true
+    toc_float: true
+    code_folding: hide
+  pdf_document:
+    toc: true
+    number_sections: true
+---
+
+```{r setup, include=FALSE}
+library(segmented)  # for piecewise regression analysis
+library(effectsize)  # for effect size calculations
+library(emmeans)  # for pairwise comparisons of ANOVA model factor levels
+library(multcomp)  # for multiple comparison of ANOVA model factor levels
+library(report)  # for simple text output of model summaries
+library(JWileymisc)  # used for 'R2()' function
+library(lavaan)  # for fitting path analysis models
+# devtools::install_github("alishinski/lavaanPlot")
+library(lavaanPlot)  # for plotting path diagrams
+library(pander)  # for RMarkdown tables
+library(tidyverse)  # you know...
+library(DiagrammeR) # for working with lavaanPlot() output path diagrams
+library(DiagrammeRsvg)  # for conversion to svg
+library(rsvg)  # for saving svg
+library(extrafont); loadfonts(device = "postscript"); loadfonts(device = "win")
+
+# function to unify model fit and figure generation for this study
+source("./fnx/piecewise_reg_xtemp.R")
+
+knitr::opts_chunk$set(echo = TRUE)
+
+temp_colors_vec <- c("#2c7bb6","#abd9e9","#ffffbf","#fdae61","#d7191c")
+```
+
+
+# Introduction  
+
+The following analysis evaluates the brook trout mercury experiments presented in CJFAS by Rutledge et al. 2025. Interactive Effects of Temperature and Food Ration on Specific Growth and Mercury Concentration in Eastern Brook Trout. DOI: . The focus of the laboratory experiment used manipulations of temperature and food ration treatments to see how Hg concentration changed in brook trout. 
+
+<br>
+
+
+# Experiment One Analysis  
+
+A piecewise regression analysis allows for breakpoint determination. We set up a piecewise regression analysis to find this temperature breakpoint where the slope of the relationship appears to change between the response variable (growth) and the independent variable (temperature).  
+
+## Data input and review  
+
+Data for experiment one contain the following variables:  
+
+1. **PIT:** pit tag identifier for each individual fish.  
+2. **tank:** the experimental tank the individual fish was within for the duration of the experiment.  
+3. **Hg:** brook trout mercury muscle tissue concentration in ng per g of dry weight.  
+4. **temperature:** the mean temperature of the water measured in the tank across the duration of the study.
+5. **tempfac:** classification for temperature treatments as a factor (16, 18, 20, 22, 24 degrees C).  
+6. **tot_tank_consumption:** the total mass of food fed to a treatment across the duration of the experiment.  
+7. **day00massg:** mass (g) of individual fish at the start of the experiment
+8. **day24massg:** mass (g) of individual fish at the end of the experiment
+9. **conv_eff:** tank-based conversion efficiency for fish (unitless value).
+10. **growth_spe:** specific growth rate for individual brook trout calculated as the ((ln(day24massg)-ln(day00massg))/24)*100.  
+
+
+<br>  
+
+```{r message=FALSE}
+dat_exp1 <- readRDS(file = "./data/temp_ration_experiment1_data.RDS") |> 
+  mutate(growth_spe = round((log(day24massg)-log(day00massg))/24*100,5))
+
+# save experiment 1 data to csv for viewing in excel if desired
+write_csv(dat_exp1, file = "./data/temp_ration_experiment1_data.csv")
+```
+
+<br>  
+
+**Treatment means and standard deviations in experiment :**
+
+```{r}
+dat_exp1 |>
+  reframe(
+    .by = tempfac,
+    growth_spe_mean = mean(growth_spe, na.rm = TRUE),
+    growth_spe_sd = sd(growth_spe, na.rm = TRUE),
+    Hg_mean = mean(Hg, na.rm = TRUE),
+    Hg_sd = sd(Hg, na.rm = TRUE),
+    end_mass_mean = mean(day24massg, na.rm = TRUE),
+    end_mass_sd = sd(day24massg, na.rm = TRUE),
+    mass_change_mean = mean(day24massg - day00massg, na.rm = TRUE),
+    mass_change_sd = sd(day24massg - day00massg, na.rm = TRUE),
+    tot_consumption_g = mean(tot_tank_consumption, na.rm = TRUE),
+    conv_eff_mean = mean(conv_eff, na.rm = TRUE),
+    n_fish = n()) |>
+  pander()
+```
+
+<br>  
+
+## Correlations  
+
+### Specific Growth and mercury   
+
+```{r}
+cor.test(dat_exp1$growth_spe, dat_exp1$Hg, alternative = "two.sided", method = "pearson")
+```
+
+Correlation between temperature and mercury concentration in the data set.   
+
+### Temperature and mercury   
+
+
+```{r}
+cor.test(dat_exp1$temperature, dat_exp1$Hg, alternative = "two.sided", method = "pearson")
+```
+
+
+### Specific Growth and Temperature   
+
+```{r}
+cor.test(dat_exp1$temperature, dat_exp1$growth_spe, alternative = "two.sided", method = "pearson")
+```
+
+
+<br>  
+
+## Piecewise regressions   
+
+
+### Specific Growth-Temperature  
+
+Fit the piecewise regression using the 'segmented' R package and review its output.  
+
+```{r}
+lm_a1_pwise <- 
+  segmented(lm(growth_spe ~ temperature, data = dat_exp1), 
+            seg.Z = ~ temperature, psi = list(temperature = c(20)) )
+
+summary(lm_a1_pwise)  # prints summary of piecewise model
+```
+The "temperature" row shows the coefficient estimate (slope) of the regression line before the breakpoint. The "U1.temperature" row in the coefficient table shows the **change** in the estimate following the breakpoint. To get the slope of the regression model after the breakpoint, add the "U1.temperature" coefficient (`r as.numeric(round(slope(lm_a1_pwise)$temperature[,"Est."][2],3)-round(slope(lm_a1_pwise)$temperature[,"Est."][1],4))`) to the "temperature" coefficient (`r as.numeric(round(slope(lm_a1_pwise)$temperature[,"Est."][1],4))`; baseline slope for reference to other breakpoint slopes), which equals `r as.numeric(round(slope(lm_a1_pwise)$temperature[,"Est."][2],4))`. We can also see that using a peicewise regression model improves our explanation of the variability in growth rate values as the adjusted-R^2^ value in a simple linear model is `r {round(R2(lm(growth_spe ~ temperature, data = dat_exp1))["AdjR2"],4)}` and with the piecewise regression it is `r {round(summary(lm_a1_pwise)$adj.r.squared,4)}`.  
+
+
+We can extract the specific breakpoint temperature (and SE) where the model determined the slope change to be between temperature and growth.   
+
+**estimated breakpoint temperature:**  
+```{r}
+(breakpt <- lm_a1_pwise$psi[2])  # grabs estimated breakpoint
+```
+
+**estimated breakpoint temperature SE:**  
+```{r}
+(breakptSE <- lm_a1_pwise$psi[3])  # grabs estimated breakpoint SE
+```
+
+
+We can also extract the slopes of each of these two line segments.    
+
+```{r}
+segslopes <- slope(lm_a1_pwise) # grabs slopes of two line segments
+segslopes$temperature[,"Est."]  # prints the slopes of each line segment
+```
+
+
+If we generate predictions using the new piecewise regression model, we can plot the various segments before and after the breakpoint.  
+
+
+```{r}
+lm_a1_preds <- 
+  data.frame(growth_spe = predict(lm_a1_pwise, 
+                              newdata = data.frame(temperature = seq(15,25,0.1))),
+             temperature = seq(15,25,0.1))
+```
+
+
+Plot the piecewise regression analysis model fits for comparison.  
+
+```{r warning = FALSE, message = FALSE}
+(simp_piece_plot <- 
+   ggplot(data = dat_exp1, 
+          aes(x = temperature, y = growth_spe)) +
+   annotate(geom = "rect", fill = "grey",
+            xmin = breakpt - breakptSE, xmax = breakpt + breakptSE,
+            ymin = -Inf, ymax = Inf, alpha = 1) +
+   geom_vline(xintercept = breakpt, 
+              color = "black", linetype = "dotted", linewidth = 0.5) +
+   geom_hline(yintercept = 0, color = "black") +
+   geom_line(data = lm_a1_preds, aes(x = temperature, y = growth_spe, color = "tomato"),
+             linewidth = 1, linetype = "solid") +
+   geom_point() +
+   
+   # breakpoint line label
+   annotate(geom = "curve",
+            x=breakpt+1, y=3.7, xend=breakpt+0.05, yend=3.7, 
+            curvature = 0.2, arrow = arrow(length = unit(0.25,"cm"), type = "closed")) +
+   annotate(geom = "label", x=breakpt+1.1, y=3.6, hjust = 0, family = "serif",
+            label = paste0("Breakpoint (\u00B1SE)\n ", 
+                           round(breakpt,2), "\u00B0C (\u00B1",round(breakptSE,2),")") ) +
+   
+   theme_bw() +
+   scale_x_continuous(breaks = seq(14,26,2)) +
+   theme(text = element_text(family = "serif")) +
+   labs(x = "Temperature (\u00B0C)", 
+        y = "Growth rate (%\u00b7day\u207B\u00B9)",) +
+   coord_cartesian(xlim = c(15,25)) + 
+   theme(legend.position = "none")
+)
+```
+
+```{r}
+# simple linear regression growth of 0 temperature
+simlinreg0growth <- 
+  as.numeric((-1*(lm(growth_spe ~ temperature, data = dat_exp1)$coefficients[1]))/
+               lm(growth_spe ~ temperature, data = dat_exp1)$coefficients[2])
+
+# piecewise regression growth of 0 temperature
+piecewise0growth <-
+  as.numeric((-1*intercept(lm_a1_pwise)$temperature[2])/
+               slope(lm_a1_pwise)$temperature[2])
+
+```
+
+
+The piecewise regression offers some additional information suggesting the slope of the relationship is much steeper (more negative) after warming to `r {paste0(round(breakpt,2), "\u00B0C")}`. This highlights how growth shifts to negative values at lower temperatures using piecewise regression analysis than when assuming a simple linear relationship. A simple linear regression predicts a transition to negative growth rates at a temperature of `r {round(simlinreg0growth,2)}``r "\u00B0C"`, while the piecewise regression predicts a transition to negative growth rates at `r {round(piecewise0growth,2)}``r "\u00B0C"`.  
+
+
+
+```{r warning = FALSE, message = FALSE}
+lm_a1_pwise_Growth <- 
+  piecewise_reg_xtemp(y_var = "growth_spe", dataframe = dat_exp1, init_bkpt = 20, 
+                    yaxis_txt = "Specific growth rate (%\u00B7day\u207B\u00B9)", label_pos = "tl",
+                    family_string = "serif")
+```
+
+
+
+### Hg-Temperature   
+
+Fit the piecewise regression using Hg as the response variable instead of growth.  
+
+```{r warning = FALSE, message = FALSE}
+lm_a1_pwise_Hg <- 
+  piecewise_reg_xtemp(y_var = "Hg", dataframe = dat_exp1, init_bkpt = 20, 
+                    yaxis_txt = "THg (ng\u00b7g\u207B\u00B9)", label_pos = "tl",
+                    family_string = "serif")
+summary(lm_a1_pwise_Hg$model)
+```
+
+**estimated breakpoint temperature:**  
+```{r}
+(breakpt <- lm_a1_pwise_Hg$model$psi[2])  # grabs estimated breakpoint
+```
+
+**estimated breakpoint temperature SE:**  
+```{r}
+(breakptSE <- lm_a1_pwise_Hg$model$psi[3])  # grabs estimated breakpoint SE
+```
+
+The mercury-temperature breakpoint (`r {paste0(round(lm_a1_pwise_Hg$model$psi[2],2),"\u00B0C")}`) is very similar to the growth-temperature breakpoint (`r {paste0(round(breakpt,2), "\u00B0C")}`).
+
+
+We can also extract the slopes of each of these two line segments.    
+
+```{r}
+segslopes <- slope(lm_a1_pwise_Hg$model) # grabs slopes of two line segments
+segslopes$temperature[,"Est."]  # prints the slopes of each line segment
+```
+
+
+```{r}
+lm_a1_pwise_Hg$fig
+```
+
+
+<br>  
+
+
+
+
+# Experiment Two Analysis  
+
+
+## Data input and review  
+
+Data for experiment two contain the following variables:  
+
+1. **PIT:** pit tag idenfier for each individual fish.  
+2. **tank:** the experimental tank the individual fish was within for the duration of the experiment.  
+3. **Hg:** brook trout mercury muscle tissue concentration in ng per g of dry weight.  
+4. **temperature:** the mean temperature of the water measured in the tank across the duration of the study.
+5. **tempfac:** classification for temperature treatments as a factor (16, 18, 20, 22, 24 degrees C).  
+6. **ration:** mass (g) of food fed to an individual fish as an average value for a given tank.  
+7. **rationfac:** classification for ration treatments as a factor ("zero", "low", or "high").
+8. **day00massg:** mass (g) of individual fish at the start of the experiment
+9. **day30massg:** mass (g) of individual fish at the end of the experiment
+10. **growth_spe:** specific growth rate for individual brook trout calculated as: ((ln(day30massg)-ln(day00massg))/30)*100.  
+11. **growth_abs:** absolute growth change for individual brook trout calculated as: day30massg-day00massg.  
+12. **conv_eff:** tank-based conversion efficiency for fish (unitless value).  
+13. **growth_abs_tnk_rnk:** absolute growth difference rank for individual fish within a given tank. Values range from 1-10 with fish ranked near 1 having larger absolute growth differences between the start and end of experiment and fish ranked closer to 10 having smaller absolute growth differences.  
+14. **VARIABLE_s:** named variable scaled to a mean of 0 and standard deviation of 1.  
+
+
+```{r message = FALSE}
+dat_exp2 <- readRDS(file = "./data/temp_ration_experiment2_data.RDS") |>
+  # 30 for 30-day experiment
+  mutate(growth_spe = round((log(day30massg)-log(day00massg))/30*100,5)) |> 
+  # create ranking system for individuals within tanks based on absolute growth
+  mutate(.by = tank,
+         growth_abs_tnk_rnk = rank(x = (growth_abs*-1), ties.method = "random") ) |>
+  # scale the variables used in the SEM analysis
+  mutate(growth_abs_tnk_rnk = factor(growth_abs_tnk_rnk, ordered = FALSE),
+         temperature_s = as.numeric(scale(temperature)),
+         ration_s = as.numeric(scale(ration)),
+         growth_abs_s = as.numeric(scale(growth_abs)),
+         growth_spe_s = as.numeric(scale(growth_spe))) 
+  
+# save experiment 2 data to csv for viewing in excel if desired
+write_csv(dat_exp2, file = "./data/temp_ration_experiment2_data.csv")
+```
+
+
+```{r}
+fig4_data <- dat_exp2 |>
+            mutate(tempLabels = if_else(tempfac == "15","15\u00B0C", 
+                                        if_else(tempfac == "22", "22\u00B0C", "Time 0")) 
+                   )|>
+            mutate(tempLabels = factor(tempLabels,
+                                       levels = c("Time 0","15\u00B0C","22\u00B0C"),
+                                       labels = c("Time 0","15\u00B0C","22\u00B0C") ) 
+                   )|>
+            select(rationfac, Hg, tempLabels) |>
+            # add time 0 data to data set
+            add_row(rationfac = factor("T0"), Hg = 95.14, tempLabels = factor("Time 0") ) |>
+            add_row(rationfac = factor("T0"), Hg = 82.78, tempLabels = factor("Time 0") ) |>
+            add_row(rationfac = factor("T0"), Hg = 92.08, tempLabels = factor("Time 0") ) |>
+            add_row(rationfac = factor("T0"), Hg = 115.09, tempLabels = factor("Time 0") ) |>
+            add_row(rationfac = factor("T0"), Hg = 124.14, tempLabels = factor("Time 0") ) |>
+            add_row(rationfac = factor("T0"), Hg = 88.64, tempLabels = factor("Time 0") ) |>
+            add_row(rationfac = factor("T0"), Hg = 90.69, tempLabels = factor("Time 0") ) |>
+            add_row(rationfac = factor("T0"), Hg = 91.14, tempLabels = factor("Time 0") ) |>
+            add_row(rationfac = factor("T0"), Hg = 89.82, tempLabels = factor("Time 0") ) |>
+            add_row(rationfac = factor("T0"), Hg = 107.75, tempLabels = factor("Time 0") ) |>
+  mutate(rationfac = factor(rationfac, levels = c("T0","Zero","Low","High")) )
+```
+
+**Time 0 Hg concentration summary statistics:**  
+
+
+```{r}
+fig4_data |>
+  reframe(.by = tempLabels, 
+          Hg_mean = mean(Hg, na.rm = TRUE),
+          Hg_sd = sd(Hg, na.rm = TRUE),
+          n = n()) |>
+  filter(tempLabels == "Time 0") |>
+  pander()
+```
+
+
+<br>  
+
+
+**Treatment means and standard deviations in experiment 2::**
+
+```{r}
+dat_exp2 |>
+  reframe(
+    .by = c(tempfac, rationfac),
+    growth_spe_mean = mean(growth_spe, na.rm = TRUE),
+    growth_spe_sd = sd(growth_spe, na.rm = TRUE),
+    Hg_mean = mean(Hg, na.rm = TRUE),
+    Hg_sd = sd(Hg, na.rm = TRUE),
+    conv_eff_mean = mean(conv_eff, na.rm = TRUE),
+    conv_eff_mean = mean(conv_eff, na.rm = TRUE),
+    day30mass_mean = mean(day30massg, na.rm = TRUE),
+    day30mass_sd = sd(day30massg, na.rm = TRUE),
+    ration_mean = mean(ration),
+    n = n()
+  ) |>
+  mutate(ration_tank_mean = ration_mean * 30) |>
+  arrange(tempfac, rationfac) |>
+  pander()
+```
+
+<br>  
+
+
+## Correlations   
+
+### Specific Growth vs Hg  
+
+```{r}
+cor.test(dat_exp2$Hg, dat_exp2$growth_spe, alternative = "two.sided", method = "pearson")
+```
+
+### Conv. Eff. vs Hg  
+
+
+```{r}
+cor.test(dat_exp2$conv_eff, dat_exp2$Hg, alternative = "two.sided", method = "pearson")
+```
+
+
+##  Visualize factored ANOVA data  
+
+To visualize this two-way anova, we have a jittered scatter plot overlaid with boxplots to visualize individual data points and their spread along the y-axis for crossed temperature and ration factor levels before fitting the model.   
+
+ 
+### Specific Growth response  
+
+
+```{r warning=FALSE}
+(exp2_growth_anova_plot <- 
+   ggplot(dat_exp2, aes(x = rationfac, 
+                        y = growth_spe)) +
+   geom_hline(yintercept = 0, color = "grey") +
+   ggpol::geom_boxjitter(aes(color = tempfac), alpha = 0.35,
+                         jitter.params = list(seed = 1, width = 0.05),
+                         width = 0.65,  # spread of boxplot widths
+                         size = 0.9,  # line width size
+                         jitter.size = 2 ) +  # point size
+   theme_bw() +
+   scale_color_manual(breaks = c("15","22"), 
+                      values = c(temp_colors_vec[1],temp_colors_vec[4])) +
+   labs(x = "Ration level", y = "Growth (% change/fish/day)",
+        color = "Temp.\n (\u00B0C)",
+        title = "Specific growth rate versus factored temperature and ration") 
+)
+```
+
+
+### Hg response  
+
+
+```{r warning=FALSE}
+(exp2_Hg_anova_plot <- 
+   ggplot(dat_exp2, aes(x = rationfac, y = Hg)) +
+   ggpol::geom_boxjitter(aes(color = tempfac), alpha = 0.35,
+                         jitter.params = list(seed = 1, width = 0.05),
+                         width = 0.65,  # spread of boxplot widths
+                         size = 0.9,  # line width size
+                         jitter.size = 2 ) +  # point size
+   theme_bw() +
+   scale_color_manual(breaks = c("15","22"), 
+                      values = c(temp_colors_vec[1],temp_colors_vec[4])) +
+   scale_shape_manual(breaks = c("15","22"), values = c(15,16)) +
+   labs(x = "Ration level", y = "BKT tissue Hg (ng/g)", 
+        title = "BKT tissue Hg concentration versus factored temperature and ration",
+        color = "Temp.\n (\u00B0C)", shape = "Temp.\n (\u00B0C)") 
+)
+```
+
+
+
+## Three-way ANOVA  
+
+Here we fit a three-way anova using temperature, ration, and ranked individuals from each tank based on their absolute growth during the experiments.  
+
+
+### Three-way interaction plot  
+
+```{r}
+# Calculated 95% confidence intervals for group means & build ggplot data frame
+threeway_plot_df <- dat_exp2 |>
+  reframe(.by = c(tempfac, rationfac),
+          TheMean = mean(Hg, na.rm = TRUE),
+          TheSD = sd(Hg, na.rm = TRUE), 
+          TheSEM = sd(Hg, na.rm = TRUE)/sqrt(n()), 
+          CIMuliplier = qt(0.95/2 + 0.5, n() - 1), 
+          N = n()  ) |>
+  mutate(LowerBoundCI = TheMean - TheSEM * CIMuliplier, 
+         UpperBoundCI = TheMean + TheSEM * CIMuliplier, 
+         LowerBoundSEM = TheMean - TheSEM, 
+         UpperBoundSEM = TheMean + TheSEM, 
+         LowerBoundSD = TheMean - TheSD, 
+         UpperBoundSD = TheMean + TheSD  )
+```
+
+
+Absolute growth ranks range from 1-10. fish with values closer to 1 are faster growing individuals, and fish with ranks closer to 10 are slower growing individuals.  
+
+
+```{r fig.width=6.5, fig.height=6.5}
+ggplot(data = threeway_plot_df,
+       aes(x = rationfac, y = TheMean, color = tempfac)) +
+  
+  geom_point(data = select(dat_exp2, TheMean = Hg, rationfac, growth_abs_tnk_rnk, tempfac),
+             aes(x = rationfac, y = TheMean, fill = growth_abs_tnk_rnk),
+             size = 2, color = "white", shape = 21, 
+             position = position_jitter(seed = 1, width = 0.2)) +
+  
+  geom_errorbar(aes(ymin = LowerBoundCI, color = tempfac, ymax = UpperBoundCI), 
+                width = 0.1, linewidth = 0.8, position = position_dodge(0.25)) + 
+  geom_point(position = position_dodge(0.25), shape = 5, size = 4, stroke = 1) +
+  geom_point(position = position_dodge(0.25), shape = 3, size = 4, stroke = 1) +
+  
+  theme_bw() +
+  scale_fill_manual(breaks = (c(1:10)),
+                    values = paste0("grey",seq(5,95,length.out = 10))) + 
+  scale_color_manual(breaks = c("15","18","20","22","24"),
+                     values = temp_colors_vec) +
+  theme(text = element_text(family = "serif"),
+        legend.background = element_blank(),
+        legend.position = "bottom",
+        legend.position.inside = c(0.8,0.95),
+        legend.direction = "horizontal", legend.key = element_blank(),
+        plot.caption = element_text(hjust = 0)) +
+  labs(x = "Ration", y = "THg (ng\u00b7g\u207B\u00B9)", 
+       title = "Three-way ANOVA interaction plot",
+       subtitle = "Temperature by Ration group means (95% CIs)",
+       color = "Temp. (\u00B0C)", fill = "Growth Rank")
+```
+
+
+
+### Model fit and summary  
+
+
+```{r}
+# fit the ANOVA model
+lm_a2_hg_gwthrnk <- 
+  aov(Hg ~ tempfac + rationfac + growth_abs_tnk_rnk, data = dat_exp2)
+```
+
+
+**Model results text summary:**  
+```{r eval = FALSE}
+report(lm_a2_hg_gwthrnk)
+```
+`r report(lm_a2_hg_gwthrnk)`  
+
+
+**Model results statistics table:**  
+```{r eval = FALSE}
+report_table(lm_a2_hg_gwthrnk)
+```
+`r report_table(lm_a2_hg_gwthrnk) |> mutate(across(where(is.numeric), ~ round(.x, digits = 4))) |> DT::datatable(rownames = FALSE, escape = FALSE, colnames = c("Eta<sup>2</sup> (partial)\nEstimate" = "Eta2_partial", "Eta<sup>2</sup> 95% CI\nlow" = "Eta2_partial_CI_low", "Eta<sup>2</sup> 95% CI\nhigh" = "Eta2_partial_CI_high") )`  
+
+<br>  
+
+
+Visualize Cohen's *f* effect size statistics for the model predictors. Cohen suggests that values of 0.10, 0.25, and 0.4 delineate small, medium, and large effect sizes, respectively.  
+
+
+```{r fig.height=4.5, fig.width=6.5, message = FALSE, warning = FALSE}
+cohens_f(lm_a2_hg_gwthrnk) |> 
+  # equivalence_test() |>
+  plot() + 
+  theme_bw() +
+  geom_vline(xintercept = 0.1, linetype = "dashed") +
+  geom_vline(xintercept = 0.25, linetype = "dotted") +
+  geom_vline(xintercept = 0.4, linetype = "dotdash") +
+  geom_text(aes(x = 0.05, y = 0.65), label = "no\neffect", color = "grey45") +
+  geom_text(aes(x = 0.175, y = 0.65), label = "small\neffect", color = "grey45") +
+  geom_text(aes(x = 0.325, y = 0.65), label = "medium\neffect", color = "grey45") +
+  geom_text(aes(x = 0.475, y = 0.65), label = "large\neffect", color = "grey45") 
+```
+
+These Cohen's *f* effect size statistics are in support of the Eta^2^ (partial) effect size statistic values from the model statistic table above. They both indicated large effect sizes for each of the three main effects.  
+
+<br>  
+
+___
+
+
+Tukey HSD pairwise comparisons.  
+
+Pairwise comparisons within a treatment type (i.e., within Temp, Ration, or Absolute Growth Rank).  
+
+```{r}
+TukeyHSD(lm_a2_hg_gwthrnk)
+```
+
+The rank pairwise comparisons (discounting any effects of temperature or ration) indicate that there are some differences among the low and high ranked individuals: 1 vs 8,9,10; 3 vs 8,9; 4 vs 9; 5 vs 9. 
+
+___
+
+Pairwise comparisons among growth rank levels for each Temperature-Ration factor level cross.  
+
+
+```{r}
+# pair-wise comparisons among factor levels for each contrasting fixed effect
+pairs(emmeans(lm_a2_hg_gwthrnk, ~rationfac | tempfac |  growth_abs_tnk_rnk))
+```
+
+
+<br>
+
+
+## SEM  
+
+For the SEM analysis, we explored model fits using continuous data for Ration, Temperature, and Absolute Growth as explanatory variables of Hg. All variables were also standardized with a mean of 0 and standard deviation of 1. This means the path coefficients in the path diagrams are directly comparable in magnitude for their given explanatory power when explaining variance in the model.  
+
+### Ration: zero, low, & high treatments  
+
+####  Model fit  
+
+```{r full data continuous, warning=TRUE}
+form_00_cont <- '
+Hg ~ growth_abs_s + temperature_s + ration_s
+growth_abs_s ~ temperature_s + ration_s
+'
+
+sem_00_cont <- lavaan::sem(form_00_cont, 
+                      cluster = "growth_abs_tnk_rnk",
+                      std.ov = TRUE,  # TRUE = formula has standardized predictors
+                      data = dat_exp2
+                      )
+```
+
+
+
+#### Model diagnostics  
+
+Model fit statistics:  
+
+```{r}
+# model fit statistics and their interpretation
+effectsize::interpret(sem_00_cont)
+```
+
+Satisfactory goodness of fit statistics here indicates the model fits the data well and supports drawing conclusions from the path diagram.  
+
+<br>  
+
+Summary of model output:  
+
+```{r}
+summary(sem_00_cont)
+```
+
+
+#### Path diagram  
+
+```{r full data continuous path diagram}
+labs_00_cont = list(temperature_s = "Water\nTemp.(\u00B0C)", 
+                    ration_s = "Food ration\n(g\u00b7fish\u207B\u00B9\u00b7day\u207B\u00B9)", 
+                    growth_abs_s = "Absolute BKT\ngrowth (g)", 
+                    Hg = "BKT THg\n(ng\u00b7g\u207B\u00B9)"
+                 )
+
+(pd_3rationfac <- 
+  lavaanPlot(model = sem_00_cont,
+           coef = TRUE,
+           stars = "regress",
+           # stand = TRUE,
+           labels = labs_00_cont,
+           graph_options = list(rankdir = 'BT',
+                                labelloc = "t",
+                                overlap = TRUE,
+                                fontsize = 36,
+                                layout = 'dot')) )
+
+# save grViz object to png file
+pd_3rationfac |> export_svg() |> charToRaw() |>
+  rsvg_png("./figs/Figure6A_SEM_zero_low_high.png", width = 1080, height = 1080)
+```
+
+
+
+
+### Ration: low & high treatments  
+
+
+#### Model fit  
+
+```{r}
+sem_01_cont <- lavaan::sem(form_00_cont, 
+                      cluster = "growth_abs_tnk_rnk",
+                      std.ov = TRUE,  # TRUE = formula has standardized predictors
+                      data = dat_exp2 |> filter(rationfac != "Zero")
+                      )
+```
+
+
+
+#### Model diagnostics  
+
+Model fit statistics:  
+
+```{r}
+# model fit statistics and their interpretation
+effectsize::interpret(sem_01_cont)
+```
+
+Satisfactory goodness of fit statistics here indicates the model fits the data well and supports drawing conclusions from the path diagram.  
+
+<br>  
+
+Summary of model output:  
+
+```{r}
+summary(sem_01_cont)
+```
+
+
+#### Path diagram  
+
+
+```{r}
+(pd_2rationfac <-
+  lavaanPlot(model = sem_01_cont,
+           coef = TRUE,
+           stars = "regress",
+           labels = labs_00_cont,
+           graph_options = list(rankdir = 'BT',
+                                labelloc = "t",
+                                overlap = TRUE,
+                                fontsize = 36,
+                                layout = 'dot')) )
+
+
+# save grViz object to png file
+pd_2rationfac |> export_svg() |> charToRaw() |>
+  rsvg_png("./figs/Figure6B_SEM_low_high.png", width = 1080, height = 1080)
+```
+
+<br>  
+
+
+# Manuscript Table 1  
+
+Experiment 1 portion of table.  
+
+```{r}
+msTable1_exp1 <- dat_exp1 |>
+  reframe(
+    .by = tempfac,
+    growth_spe_mean = round(mean(growth_spe, na.rm = TRUE),1),
+    growth_spe_sd = round(sd(growth_spe, na.rm = TRUE),1),
+    Hg_mean = round(mean(Hg, na.rm = TRUE),1),
+    Hg_sd = round(sd(Hg, na.rm = TRUE),1),
+    tot_consumption_g = round(mean(tot_tank_consumption, na.rm = TRUE),1),
+    conv_eff_mean = round(mean(conv_eff, na.rm = TRUE),1)) |>
+  mutate(ration = NA, 
+         growth_spe = paste0(growth_spe_mean,"\u00B1",growth_spe_sd),
+         Hg = paste0(Hg_mean,"\u00B1",Hg_sd),
+         Experiment = 1) |>
+  select(Experiment, tempfac, ration, growth_spe, Hg, tot_consumption_g, conv_eff_mean)
+```
+
+Experiment 2 portion of table.  
+
+```{r}
+msTable1_exp2_T0 <- fig4_data |>
+  reframe(.by = tempLabels, 
+          Hg_mean = round(mean(Hg, na.rm = TRUE),1),
+          Hg_sd = round(sd(Hg, na.rm = TRUE),1) ) |>
+  filter(tempLabels == "Time 0") |>
+  mutate(tempfac = factor("Time 0", levels = c("Time 0","15","22")),
+         ration = NA,
+         growth_spe = NA,
+         Hg = paste0(Hg_mean,"\u00B1",Hg_sd),
+         tot_consumption_g = NA,
+         conv_eff_mean = NA) |>
+  select(-tempLabels, -Hg_mean, -Hg_sd)
+  
+msTable1_exp2 <- dat_exp2 |>
+  reframe(
+    .by = c(tempfac, rationfac),
+    growth_spe_mean = round(mean(growth_spe, na.rm = TRUE),1),
+    growth_spe_sd = round(sd(growth_spe, na.rm = TRUE),1),
+    Hg_mean = round(mean(Hg, na.rm = TRUE),1),
+    Hg_sd = round(sd(Hg, na.rm = TRUE),1),
+    ration_mean = mean(ration),
+    conv_eff_mean = if_else(is.nan(mean(conv_eff, na.rm = TRUE)),
+                            NA,
+                            round(mean(conv_eff, na.rm = TRUE),1))) |>
+  mutate(ration = NA, 
+         growth_spe = paste0(growth_spe_mean,"\u00B1",growth_spe_sd),
+         Hg = paste0(Hg_mean,"\u00B1",Hg_sd),
+         ration_tank_mean = ration_mean * 30) |>
+  select(tempfac, ration = rationfac, growth_spe, Hg, tot_consumption_g = ration_tank_mean, 
+         conv_eff_mean) |>
+  bind_rows(msTable1_exp2_T0) |>
+  mutate(tempfac = factor(tempfac, levels = c("Time 0","15","22")),
+         Experiment = 2,
+         # update total consumption to an average tank/treatment total to match exp1
+         tot_consumption_g = if_else(tempfac == "22" & ration == "High",
+                                     tot_consumption_g * 9,  # one mortailty so 9 fish
+                                     tot_consumption_g * 10) # 10 fish per tank
+         ) |> 
+  relocate(Experiment) |>
+  arrange(tempfac, ration)
+```
+
+Join Experiment 1 and Experiment 2 into single table and adjust some formatting.  
+
+```{r}
+msTable1 <- bind_rows(msTable1_exp1, msTable1_exp2) |>
+  mutate(tot_consumption_g = round(tot_consumption_g,1)) |>
+  mutate(across(everything(), ~as.character(.x))) |>
+  mutate(across(everything(), ~replace_na(.x, "*"))) |>
+  rename(Temperature = tempfac, Ration = ration, `Specific Growth` = growth_spe,
+         `Total Consumption` = tot_consumption_g, `Conversion Efficiency` = conv_eff_mean)
+```
+
+**View Table 1:**  
+
+`r pander(msTable1)`
+
+
+Save Table 1 to file.  
+
+```{r}
+write_csv(msTable1, file = "./tables/msTable1.csv")
+```
+
+
+# Manuscript Figures  
+
+
+## Figure 1  
+
+```{r fig.height=4.5, fig.width=6.5}
+(msFig1 <- 
+   ggplot(data = dat_exp1, aes(x = growth_spe, y = Hg,)) +
+   geom_smooth(method = "lm", formula = 'y ~ x', se = FALSE, color = "black") +
+   geom_point(aes(shape = tempfac, fill = tempfac),
+              size = 3) +
+   theme_bw() +
+   scale_shape_manual(breaks = c("16","18","20","22","24"),
+                      values = c(21,22,23,24,25)) +
+   scale_fill_manual(breaks = c("16","18","20","22","24"),
+                      values = temp_colors_vec ) +
+   theme(text = element_text(family = "serif"),
+         legend.position = "inside", legend.position.inside = c(0.9,0.775),
+         legend.background = element_blank(), legend.key = element_blank()) +
+   labs(x = "Specific growth rate (%\u00B7day\u207B\u00B9)", y = "THg (ng\u00B7g\u207B\u00B9)", 
+        shape = "Temp. (\u00B0C)", fill = "Temp. (\u00B0C)")
+)
+```
+
+<br>  
+
+**Linear model fit report:**  
+
+```{r eval = FALSE}
+report(lm(Hg ~ growth_spe, data = dat_exp1))
+```
+
+`r report(lm(Hg ~ growth_spe, data = dat_exp1))`
+
+<br>  
+
+**Linear model estimate table:**  
+
+```{r eval = TRUE}
+report_table(lm(Hg ~ growth_spe, data = dat_exp1))
+```
+
+
+<br>  
+
+
+## Figure 2  
+
+ 
+```{r fig.height=7.75, fig.width=6.5}
+(msFig2 <-
+   cowplot::plot_grid(
+     # Specific Growth 
+     lm_a1_pwise_Growth$fig + 
+       labs(title = "A.") + 
+       theme(text = element_text(family = "serif"),
+             plot.title.position = "plot"),
+     # Hg
+     lm_a1_pwise_Hg$fig + 
+       labs(title = "B.") + 
+       theme(text = element_text(family = "serif"),
+             plot.title.position = "plot"), 
+     
+     nrow = 2, align = "v", axis = "l")
+)
+
+```
+
+
+## Figure 3  
+
+
+```{r fig.width=6.5, fig.height=4.5}
+(msFig3 <- ggplot(data = dat_exp2, aes(x = growth_spe, y = Hg)) +
+   geom_smooth(method = "lm", formula = 'y ~ x', se = FALSE, color = "black") +
+   geom_point(aes(fill = tempfac, shape = rationfac),
+              size = 3) +
+   theme_bw() +
+   scale_shape_manual(breaks = c("Zero","Low","High"),
+                      values = c(21,23,25),
+                      guide = guide_legend(override.aes = list(size = 5), order = 2) ) +
+   scale_fill_manual(breaks = c("15","18","20","22","24"),
+                     values = temp_colors_vec,
+                     guide = guide_legend(override.aes = list(shape = 22, size = 6), order = 1)) +
+   theme(text = element_text(family = "serif"),
+         
+         legend.position = "inside", legend.position.inside = c(0.9,0.675),
+         legend.background = element_blank(), legend.key = element_blank()) +
+   labs(x = "Specific growth rate (%\u00B7day\u207B\u00B9)", 
+        y = "THg (ng\u00b7g\u207B\u00B9)", 
+        fill = "Temp. (\u00B0C)",shape = "Ration")
+)
+```
+
+<br>  
+
+**Linear model fit report:**  
+
+```{r eval = FALSE}
+report(lm(Hg ~ growth_spe, data = dat_exp2))
+```
+
+`r report(lm(Hg ~ growth_spe, data = dat_exp2))`
+
+<br>  
+
+**Linear model estimate table:**  
+
+```{r eval = TRUE}
+report_table(lm(Hg ~ growth_spe, data = dat_exp2))
+```
+
+<br>  
+
+  
+
+## Figure 4  
+
+
+```{r}
+
+# ANOVA model for significance letters/comparisons
+fig4_mod <- aov(formula = Hg ~ tempLabels * rationfac, data = fig4_data)
+
+# summary of ANOVA model
+summary(fig4_mod) |> pander()
+
+# TukeyHSD comparisons
+fig4_HSD <- TukeyHSD(fig4_mod)
+
+# model means for each grouping of temp by ration
+model_means_cld <- emmeans(object = fig4_mod, specs = ~ tempLabels + rationfac)
+
+# still Tukey pair-wise comparisons, but sidak used for CIs in output
+cld <- cld(model_means_cld, adjust = "sidak",  
+           Letters = letters, alpha = 0.05, decreasing = TRUE)
+
+# generate data frame for TukeyHSD significance letter labels
+# These letters represent statistical significant across all treatment levels
+cld_df <- data.frame(tempLabels = cld$tempLabels,
+                     rationfac = cld$rationfac,
+                     cld = cld$.group) |>
+  filter(cld != "") |>
+  left_join(select(data.frame(model_means_cld), tempLabels, rationfac, Hg = upper.CL), 
+            by = c("tempLabels","rationfac"))
+```
+
+
+```{r fig.width=6.5, fig.height=4.5}
+strip_cols <-
+  ggh4x::strip_themed(background_x = ggh4x::elem_list_rect(fill = c("white",'#2c7bb6','#fdae61')))
+
+
+
+(msFig4 <- 
+    ggplot(data = fig4_data) +
+    geom_boxplot(aes(x = rationfac, y = Hg, fill = rationfac)) +
+    # add the statistical significance letters to the groups
+    geom_text(data = cld_df, aes(x = rationfac, y = 137,label = cld), 
+              family = "serif") +
+    
+    theme_bw() +
+    scale_fill_manual(breaks = c("","Zero","Low","High"),
+                      values = c("white", "#e5f5f9", "#99d8c9", "#2ca25f")) +
+    ggh4x::facet_grid2(~tempLabels, 
+                       space = "free",
+                       strip = strip_cols,
+                       scales = "free_x") +
+    theme(panel.spacing = unit(1, "lines"), 
+          strip.background = element_rect(fill = c(NA,'#2c7bb6','#fdae61')),
+          legend.position = "none",
+          text = element_text(family = "serif")) +
+    labs(y = "THg (ng\u00B7g\u207B\u00B9)", x = "Ration", fill = "Ration")
+)
+```
+
+
+<br>  
+
+
+## Figure 5  
+
+
+```{r fig.width=6.5, fig.height=4.5}
+(msFig5 <- ggplot(data = threeway_plot_df,
+                       aes(x = rationfac, y = TheMean, color = tempfac)) +
+   
+   geom_point(data = select(dat_exp2, TheMean = Hg, rationfac, growth_abs_tnk_rnk, tempfac),
+              aes(x = rationfac, y = TheMean, fill = growth_abs_tnk_rnk),
+              size = 2, color = "white", shape = 21, 
+              position = position_jitter(seed = 1, width = 0.2)) +
+   
+   geom_errorbar(aes(ymin = LowerBoundCI, color = tempfac, ymax = UpperBoundCI), 
+                 width = 0.1, linewidth = 0.8, position = position_dodge(0.25)) + 
+   geom_point(position = position_dodge(0.25), shape = 5, size = 4, stroke = 1) +
+   geom_point(position = position_dodge(0.25), shape = 3, size = 4, stroke = 1) +
+   
+   theme_bw() +
+   scale_fill_manual(breaks = c(1:10),
+                     values = paste0("grey",seq(5,95,length.out = 10))) + 
+   scale_color_manual(breaks = c("15","18","20","22","24"),
+                     values = temp_colors_vec) +
+   theme(text = element_text(family = "serif"),
+         legend.background = element_blank(),
+         legend.position = "bottom",
+         legend.position.inside = c(0.8,0.95),
+         legend.direction = "horizontal", legend.key = element_blank(),
+         plot.caption = element_text(hjust = 0)) +
+   labs(x = "Ration", y = "THg (ng\u00b7g\u207B\u00B9)", 
+        color = "Temp. (\u00B0C)", fill = "Growth Rank")
+)
+```
+
+
+
+## Figure 6  
+
+
+
+```{r fig.width=6.5, fig.height=3.5}
+# read back in each png file for each path diagram and convert to ggplot object
+pd1 <- 
+  magick::image_read(path = "./figs/Figure6A_SEM_zero_low_high.png") |> 
+  magick::image_ggplot()
+
+pd2 <- 
+  magick::image_read("./figs/Figure6B_SEM_low_high.png") |>
+  magick::image_ggplot()
+
+# use cowplot to arrange panel of ggplot objects
+(msFig6 <- 
+  cowplot::plot_grid(
+     # zero, low, & high 
+     pd1 + 
+       labs(title = "   A. Zero, Low, & High ration levels") +
+       # labs(title = "") + 
+       theme(text = element_text(family = "serif"),
+             plot.title.position = "plot"),
+     # low & high
+     pd2 + 
+       labs(title = "   B. Low & High ration levels") +
+       # labs(title = "") + 
+       theme(text = element_text(family = "serif"),
+             plot.title.position = "plot"), 
+     # number of rows in panel plot
+     nrow = 1) +
+  theme(plot.background = element_rect(fill = "white"))
+)  
+```
+
+
+## Save figures to files  
+
+PNG file exports.  
+
+```{r}
+ggsave(plot = msFig1, units = "in", width = 6.5, height = 4.5, dpi = 600,
+       file = "./figs/Figure1.png")
+
+ggsave(plot = msFig2, units = "in", width = 6.5, height = 7.75, dpi = 600,
+       file = "./figs/Figure2.png")
+
+ggsave(plot = msFig3, units = "in", width = 6.5, height = 4.5, dpi = 600,
+       file = "./figs/Figure3.png")
+
+ggsave(plot = msFig4, units = "in", width = 6.5, height = 4.5, dpi = 600,
+       file = "./figs/Figure4.png")
+
+ggsave(plot = msFig5, units = "in", width = 6.5, height = 4.5, dpi = 600,
+       file = "./figs/Figure5.png")
+
+ggsave(plot = msFig6, units = "in", width = 6.5, height = 3.5, dpi = 600,
+       file = "./figs/Figure6.png")
+```
+
+
+EPS file exports.  
+
+```{r}
+ggsave(plot = msFig1, units = "in", width = 6.5, height = 4.5, dpi = 600,
+       device = cairo_ps,
+       file = "./figs/Figure1.eps")
+
+ggsave(plot = msFig2, units = "in", width = 6.5, height = 7.75, dpi = 600,
+       device = cairo_ps,
+       file = "./figs/Figure2.eps")
+
+ggsave(plot = msFig3, units = "in", width = 6.5, height = 4.5, dpi = 600,
+       device = cairo_ps,
+       file = "./figs/Figure3.eps")
+
+ggsave(plot = msFig4, units = "in", width = 6.5, height = 4.5, dpi = 600,
+       device = cairo_ps,
+       file = "./figs/Figure4.eps")
+
+ggsave(plot = msFig5, units = "in", width = 6.5, height = 4.5, dpi = 600,
+       device = cairo_ps,
+       file = "./figs/Figure5.eps")
+
+ggsave(plot = msFig6, units = "in", width = 6.5, height = 3.5, dpi = 600,
+       device = cairo_ps,
+       file = "./figs/Figure6.eps")
+```
+

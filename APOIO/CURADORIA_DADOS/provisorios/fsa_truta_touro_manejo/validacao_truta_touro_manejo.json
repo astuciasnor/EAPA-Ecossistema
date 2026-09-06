@@ -1,0 +1,41 @@
+{
+  "conjunto": "truta_touro_manejo",
+  "n_total": 137,
+  "n_por_periodo": {
+    "2001": 110,
+    "1977-79": 27
+  },
+  "ausentes": {
+    "comprimento_furcal_mm": 0,
+    "massa_umida_g": 0,
+    "periodo_coleta": 0
+  },
+  "duplicatas_completas": 0,
+  "estatisticas_comprimento_furcal_mm": {
+    "2001": {
+      "n": 110,
+      "minimo_mm": 82,
+      "q1_mm": 193,
+      "mediana_mm": 313,
+      "q3_mm": 407,
+      "maximo_mm": 444
+    },
+    "1977-79": {
+      "n": 27,
+      "minimo_mm": 90,
+      "q1_mm": 374,
+      "mediana_mm": 411,
+      "q3_mm": 446,
+      "maximo_mm": 480
+    }
+  },
+  "mann_whitney_comprimento_por_periodo": {
+    "u_periodo_1977_79": 2213.5,
+    "u_2001": 756.5,
+    "u_menor": 756.5,
+    "z_aproximado": 3.9393218378955286,
+    "p_bicaudal_aproximado": 0.00008174696568419293,
+    "empates": true
+  },
+  "decisao_curadoria": "Todos os 137 peixes foram preservados. A base publicada foi reconstruida aproximadamente da Figura 2; o identificador do lago nao esta disponivel no CSV e nao pode ser controlado na analise didatica."
+}

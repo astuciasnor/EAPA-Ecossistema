@@ -1,0 +1,152 @@
+[
+  {
+    "data": "bezerros_amostra_unica.xlsx",
+    "handout": "atividade_t_uma_amostra_bezerros.md",
+    "rows_expected": 11,
+    "rows_found": 11,
+    "columns_expected": 1,
+    "columns_found": 1,
+    "handout_links_data": true,
+    "formula_errors": 0
+  },
+  {
+    "data": "bezerros_racas.xlsx",
+    "handout": "atividade_t_independente_bezerros_racas.md",
+    "rows_expected": 21,
+    "rows_found": 21,
+    "columns_expected": 2,
+    "columns_found": 2,
+    "handout_links_data": true,
+    "formula_errors": 0
+  },
+  {
+    "data": "racao_quatro_niveis.xlsx",
+    "handout": "atividade_anova_racao_quatro_niveis.md",
+    "rows_expected": 17,
+    "rows_found": 17,
+    "columns_expected": 2,
+    "columns_found": 2,
+    "handout_links_data": true,
+    "formula_errors": 0
+  },
+  {
+    "data": "cultivo_tilapia_produtividade.xlsx",
+    "handout": "atividade_anova_cultivo_tilapia.md",
+    "rows_expected": 17,
+    "rows_found": 17,
+    "columns_expected": 2,
+    "columns_found": 2,
+    "handout_links_data": true,
+    "formula_errors": 0
+  },
+  {
+    "data": "densidade_tilapia_taxa.xlsx",
+    "handout": "atividade_anova_densidade_tilapia.md",
+    "rows_expected": 22,
+    "rows_found": 22,
+    "columns_expected": 2,
+    "columns_found": 2,
+    "handout_links_data": true,
+    "formula_errors": 0
+  },
+  {
+    "data": "leite_tuberculo_dbc.xlsx",
+    "handout": "atividade_dbc_leite_tuberculo.md",
+    "rows_expected": 25,
+    "rows_found": 25,
+    "columns_expected": 3,
+    "columns_found": 3,
+    "handout_links_data": true,
+    "formula_errors": 0
+  },
+  {
+    "data": "amostragem_estratificada_lagosta.xlsx",
+    "handout": "atividade_amostragem_estratificada_lagosta.md",
+    "rows_expected": 9,
+    "rows_found": 9,
+    "columns_expected": 4,
+    "columns_found": 4,
+    "handout_links_data": true,
+    "formula_errors": 0
+  },
+  {
+    "data": "delineamento_dic_tanques.xlsx",
+    "handout": "atividade_delineamento_dic_tanques.md",
+    "rows_expected": 21,
+    "rows_found": 21,
+    "columns_expected": 2,
+    "columns_found": 2,
+    "handout_links_data": true,
+    "formula_errors": 0
+  },
+  {
+    "data": "demonstracao_tlc.xlsx",
+    "handout": "atividade_tlc_demonstracao.md",
+    "rows_expected": 60,
+    "rows_found": 60,
+    "columns_expected": 1,
+    "columns_found": 1,
+    "handout_links_data": true,
+    "formula_errors": 0
+  },
+  {
+    "data": "pulgoes_tratamentos.xlsx",
+    "handout": "atividade_anova_pulgoes.md",
+    "rows_expected": 31,
+    "rows_found": 31,
+    "columns_expected": 2,
+    "columns_found": 2,
+    "handout_links_data": true,
+    "formula_errors": 0
+  },
+  {
+    "data": "cvf_pareado.xlsx",
+    "handout": "atividade_t_pareado_cvf.md",
+    "rows_expected": 11,
+    "rows_found": 11,
+    "columns_expected": 3,
+    "columns_found": 3,
+    "handout_links_data": true,
+    "formula_errors": 0
+  },
+  {
+    "data": "ira_creatinina.xlsx",
+    "handout": "atividade_t_independente_ira.md",
+    "rows_expected": 12,
+    "rows_found": 12,
+    "columns_expected": 2,
+    "columns_found": 2,
+    "handout_links_data": true,
+    "formula_errors": 0
+  },
+  {
+    "data": "banana_larvas_qui2.xlsx",
+    "handout": "atividade_qui2_banana_larvas.md",
+    "rows_expected": 3,
+    "rows_found": 3,
+    "columns_expected": 4,
+    "columns_found": 4,
+    "handout_links_data": true,
+    "formula_errors": 0
+  },
+  {
+    "data": "moscas_vegetacao_densidade.xlsx",
+    "handout": "atividade_anova_moscas.md",
+    "rows_expected": 16,
+    "rows_found": 16,
+    "columns_expected": 2,
+    "columns_found": 2,
+    "handout_links_data": true,
+    "formula_errors": 0
+  },
+  {
+    "data": "pardais_asa_idade.xlsx",
+    "handout": "atividade_regressao_pardais.md",
+    "rows_expected": 14,
+    "rows_found": 14,
+    "columns_expected": 2,
+    "columns_found": 2,
+    "handout_links_data": true,
+    "formula_errors": 0
+  }
+]

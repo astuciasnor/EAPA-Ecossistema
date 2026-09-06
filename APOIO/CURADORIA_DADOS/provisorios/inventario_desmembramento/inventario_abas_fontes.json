@@ -1,0 +1,3868 @@
+[
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/brutos.xlsx",
+    "sheet_index": 1,
+    "sheet_name": "1.Isop",
+    "used_range": "A1:B17",
+    "rows": 17,
+    "columns": 2,
+    "preview": [
+      [
+        "Racao",
+        "Peso"
+      ],
+      [
+        "A",
+        "150.6"
+      ],
+      [
+        "A",
+        "128.9"
+      ],
+      [
+        "A",
+        "137.2"
+      ],
+      [
+        "A",
+        "130.5"
+      ],
+      [
+        "B",
+        "225.1"
+      ],
+      [
+        "B",
+        "210.6"
+      ],
+      [
+        "B",
+        "218.5"
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/brutos.xlsx",
+    "sheet_index": 2,
+    "sheet_name": "2.Tilapia",
+    "used_range": "A1:B17",
+    "rows": 17,
+    "columns": 2,
+    "preview": [
+      [
+        "Cultura",
+        "Produt"
+      ],
+      [
+        "CM",
+        "1.4"
+      ],
+      [
+        "CM",
+        "1.2"
+      ],
+      [
+        "CM",
+        "1.5"
+      ],
+      [
+        "CM",
+        "1.6"
+      ],
+      [
+        "TM",
+        "2.5"
+      ],
+      [
+        "TM",
+        "3"
+      ],
+      [
+        "TM",
+        "2.8"
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/brutos.xlsx",
+    "sheet_index": 3,
+    "sheet_name": "3.crabs",
+    "used_range": "A1:I157",
+    "rows": 157,
+    "columns": 9,
+    "preview": [
+      [
+        "especie",
+        "sexo",
+        "FL",
+        "RW",
+        "CL",
+        "CW",
+        "BD",
+        "",
+        ""
+      ],
+      [
+        "azul",
+        "M",
+        "8.1",
+        "6.7",
+        "16.1",
+        "19",
+        "7",
+        "",
+        ""
+      ],
+      [
+        "azul",
+        "M",
+        "8.8",
+        "7.7",
+        "18.1",
+        "20.8",
+        "7.4",
+        "",
+        ""
+      ],
+      [
+        "azul",
+        "M",
+        "9.2",
+        "7.8",
+        "19",
+        "22.4",
+        "7.7",
+        "",
+        ""
+      ],
+      [
+        "azul",
+        "M",
+        "9.6",
+        "7.9",
+        "20.1",
+        "23.1",
+        "8.2",
+        "",
+        ""
+      ],
+      [
+        "azul",
+        "M",
+        "10.8",
+        "9",
+        "23",
+        "26.5",
+        "9.8",
+        "",
+        ""
+      ],
+      [
+        "azul",
+        "M",
+        "11.6",
+        "9.1",
+        "24.5",
+        "28.4",
+        "10.4",
+        "",
+        ""
+      ],
+      [
+        "azul",
+        "M",
+        "11.8",
+        "10.5",
+        "25.2",
+        "29.3",
+        "10.3",
+        "",
+        ""
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/brutos.xlsx",
+    "sheet_index": 4,
+    "sheet_name": "4.Densidade",
+    "used_range": "A1:B22",
+    "rows": 22,
+    "columns": 2,
+    "preview": [
+      [
+        "Densidade",
+        "Taxa"
+      ],
+      [
+        "A",
+        "4.9"
+      ],
+      [
+        "A",
+        "4.1"
+      ],
+      [
+        "A",
+        "10.7"
+      ],
+      [
+        "A",
+        "8.4"
+      ],
+      [
+        "A",
+        "5.8"
+      ],
+      [
+        "A",
+        "9.1"
+      ],
+      [
+        "A",
+        "6.8"
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/brutos.xlsx",
+    "sheet_index": 5,
+    "sheet_name": "5.Escama",
+    "used_range": "A1:A201",
+    "rows": 201,
+    "columns": 1,
+    "preview": [
+      [
+        "Peso(g)"
+      ],
+      [
+        "0.806"
+      ],
+      [
+        "1.281"
+      ],
+      [
+        "1.733"
+      ],
+      [
+        "1.289"
+      ],
+      [
+        "0.841"
+      ],
+      [
+        "0.87"
+      ],
+      [
+        "0.8"
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/brutos.xlsx",
+    "sheet_index": 6,
+    "sheet_name": "6.Sensorial",
+    "used_range": "A1:L46",
+    "rows": 46,
+    "columns": 12,
+    "preview": [
+      [
+        "ESPEC",
+        "Espécies",
+        "Provador",
+        "Cor",
+        "Olhos",
+        "Brânquias",
+        "Escamas",
+        "Mucosidade",
+        "Integridade",
+        "Odor",
+        "Firmeza Abdominal",
+        "Firmeza Muscular"
+      ],
+      [
+        "PG",
+        "Pescado Gó",
+        "1",
+        "3",
+        "2.7",
+        "2.8",
+        "2.7",
+        "2.7",
+        "2.65",
+        "2.75",
+        "2.95",
+        "2.9"
+      ],
+      [
+        "PG",
+        "Pescado Gó",
+        "2",
+        "2.8",
+        "2.6",
+        "3.15",
+        "2.9",
+        "2.5",
+        "2.95",
+        "3.05",
+        "2.95",
+        "2.8"
+      ],
+      [
+        "PG",
+        "Pescado Gó",
+        "3",
+        "2.8",
+        "2.6",
+        "2.95",
+        "2.85",
+        "2.55",
+        "2.95",
+        "3.15",
+        "2.95",
+        "2.8"
+      ],
+      [
+        "COR",
+        "Corvina",
+        "1",
+        "2.85",
+        "2.95",
+        "2.8",
+        "3.4",
+        "3.15",
+        "2.95",
+        "3.4",
+        "3.25",
+        "3.05"
+      ],
+      [
+        "COR",
+        "Corvina",
+        "2",
+        "3.1",
+        "2.95",
+        "3.35",
+        "3.4",
+        "3.25",
+        "3.4",
+        "3.05",
+        "3.25",
+        "3.1"
+      ],
+      [
+        "COR",
+        "Corvina",
+        "3",
+        "3.05",
+        "3.25",
+        "3.25",
+        "3.5",
+        "3",
+        "3.05",
+        "3.15",
+        "3.15",
+        "2.95"
+      ],
+      [
+        "SER",
+        "Serra",
+        "1",
+        "3.6",
+        "3.65",
+        "1.6",
+        "0",
+        "3.45",
+        "3.1",
+        "4",
+        "2",
+        "3.4"
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/brutos.xlsx",
+    "sheet_index": 7,
+    "sheet_name": "7.Species",
+    "used_range": "A1:E7",
+    "rows": 7,
+    "columns": 5,
+    "preview": [
+      [
+        "sp1",
+        "sp2",
+        "sp3",
+        "sp4",
+        "sp5"
+      ],
+      [
+        "5",
+        "2",
+        "5",
+        "2",
+        "1"
+      ],
+      [
+        "0",
+        "1",
+        "3",
+        "2",
+        "1"
+      ],
+      [
+        "2",
+        "1",
+        "3",
+        "2",
+        "1"
+      ],
+      [
+        "5",
+        "20",
+        "6",
+        "5",
+        "5"
+      ],
+      [
+        "12",
+        "19",
+        "4",
+        "7",
+        "11"
+      ],
+      [
+        "11",
+        "21",
+        "5",
+        "7",
+        "10"
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/brutos.xlsx",
+    "sheet_index": 8,
+    "sheet_name": "8.Bioecol",
+    "used_range": "A1:L11",
+    "rows": 11,
+    "columns": 12,
+    "preview": [
+      [
+        "Especie",
+        "IC",
+        "AR",
+        "CR",
+        "ICPCD",
+        "IAV",
+        "RANP",
+        "PRO",
+        "CRC",
+        "LRB",
+        "ARB",
+        "ABO"
+      ],
+      [
+        "OR",
+        "2.5",
+        "0.37",
+        "0.34",
+        "2.08",
+        "0.66",
+        "3.28",
+        "0.31",
+        "0.32",
+        "0.08",
+        "0.12",
+        "1.55"
+      ],
+      [
+        "EA",
+        "2.77",
+        "0.33",
+        "0.29",
+        "2.46",
+        "0.61",
+        "4.63",
+        "0.28",
+        "0.3",
+        "0.05",
+        "0.07",
+        "1.48"
+      ],
+      [
+        "HS",
+        "2.41",
+        "0.36",
+        "0.32",
+        "2.43",
+        "0.66",
+        "3.62",
+        "0.34",
+        "0.36",
+        "0.08",
+        "0.21",
+        "2.51"
+      ],
+      [
+        "HP",
+        "2.66",
+        "0.37",
+        "0.35",
+        "2.24",
+        "0.69",
+        "3.21",
+        "0.4",
+        "0.37",
+        "0.09",
+        "0.23",
+        "2.69"
+      ],
+      [
+        "HA",
+        "2.4",
+        "0.32",
+        "0.34",
+        "2.46",
+        "0.69",
+        "3.78",
+        "0.3",
+        "0.35",
+        "0.07",
+        "0.16",
+        "2.21"
+      ],
+      [
+        "SM",
+        "7.29",
+        "0.44",
+        "0.24",
+        "5.7",
+        "0.52",
+        "6.45",
+        "0.2",
+        "0.27",
+        "0.05",
+        "0.09",
+        "1.86"
+      ],
+      [
+        "ST",
+        "0.99",
+        "0.21",
+        "0.29",
+        "1.46",
+        "0.68",
+        "1.4",
+        "0.58",
+        "0.33",
+        "0.07",
+        "0.03",
+        "0.43"
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/brutos.xlsx",
+    "sheet_index": 9,
+    "sheet_name": "9.Aquifero",
+    "used_range": "A1:G20",
+    "rows": 20,
+    "columns": 7,
+    "preview": [
+      [
+        "Amostra",
+        "HCO3",
+        "SO4",
+        "Cl",
+        "Ca",
+        "Mg",
+        "Na"
+      ],
+      [
+        "E01",
+        "10.4",
+        "30",
+        "967.1",
+        "95.9",
+        "53.7",
+        "857.7"
+      ],
+      [
+        "E02",
+        "6.2",
+        "29.6",
+        "1174.9",
+        "111.7",
+        "43.9",
+        "1054.7"
+      ],
+      [
+        "E03",
+        "2.1",
+        "11.4",
+        "2387.1",
+        "348.3",
+        "119.3",
+        "1932.4"
+      ],
+      [
+        "E04",
+        "8.5",
+        "22.5",
+        "2186.1",
+        "339.6",
+        "73.6",
+        "1803.4"
+      ],
+      [
+        "E05",
+        "6.7",
+        "32.8",
+        "2015.5",
+        "287.6",
+        "75.1",
+        "1691.8"
+      ],
+      [
+        "E06",
+        "3.8",
+        "18.9",
+        "2175.8",
+        "340.4",
+        "63.8",
+        "1793.9"
+      ],
+      [
+        "E07",
+        "1.5",
+        "16.5",
+        "2367",
+        "412",
+        "95.8",
+        "1872.5"
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/brutos.xlsx",
+    "sheet_index": 10,
+    "sheet_name": "10.Caranguejo",
+    "used_range": "A1:E994",
+    "rows": 994,
+    "columns": 5,
+    "preview": [
+      [
+        "Local",
+        "Sexo",
+        "Estacao",
+        "LC",
+        "CC"
+      ],
+      [
+        "Caratateua",
+        "Macho",
+        "Seca",
+        "60",
+        "56"
+      ],
+      [
+        "Caratateua",
+        "Macho",
+        "Seca",
+        "63",
+        "61"
+      ],
+      [
+        "Caratateua",
+        "Macho",
+        "Seca",
+        "69",
+        "67"
+      ],
+      [
+        "Caratateua",
+        "Macho",
+        "Seca",
+        "65",
+        "62"
+      ],
+      [
+        "Caratateua",
+        "Macho",
+        "Seca",
+        "64",
+        "62"
+      ],
+      [
+        "Caratateua",
+        "Macho",
+        "Seca",
+        "70",
+        "68"
+      ],
+      [
+        "Caratateua",
+        "Macho",
+        "Seca",
+        "60",
+        "58"
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/brutos.xlsx",
+    "sheet_index": 11,
+    "sheet_name": "11. Gator",
+    "used_range": "A1:I17",
+    "rows": 17,
+    "columns": 9,
+    "preview": [
+      [
+        "profile",
+        "Gender",
+        "Size",
+        "Lake",
+        "Fish",
+        "Invertebrate",
+        "Reptile",
+        "Bird",
+        "Other"
+      ],
+      [
+        "1",
+        "f",
+        "<2.3",
+        "george",
+        "3",
+        "9",
+        "1",
+        "0",
+        "1"
+      ],
+      [
+        "2",
+        "m",
+        "<2.3",
+        "george",
+        "13",
+        "10",
+        "0",
+        "2",
+        "2"
+      ],
+      [
+        "3",
+        "f",
+        ">2.3",
+        "george",
+        "8",
+        "1",
+        "0",
+        "0",
+        "1"
+      ],
+      [
+        "4",
+        "m",
+        ">2.3",
+        "george",
+        "9",
+        "0",
+        "0",
+        "1",
+        "2"
+      ],
+      [
+        "5",
+        "f",
+        "<2.3",
+        "hancock",
+        "16",
+        "3",
+        "2",
+        "2",
+        "3"
+      ],
+      [
+        "6",
+        "m",
+        "<2.3",
+        "hancock",
+        "7",
+        "1",
+        "0",
+        "0",
+        "5"
+      ],
+      [
+        "7",
+        "f",
+        ">2.3",
+        "hancock",
+        "3",
+        "0",
+        "1",
+        "2",
+        "3"
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/brutos.xlsx",
+    "sheet_index": 12,
+    "sheet_name": "12. Lagosta",
+    "used_range": "A1:D9",
+    "rows": 9,
+    "columns": 4,
+    "preview": [
+      [
+        "Estrato(Tipo)",
+        "Numero_de_caixas",
+        "Ni",
+        "ni"
+      ],
+      [
+        "E3",
+        "5",
+        "270",
+        "27"
+      ],
+      [
+        "E4",
+        "8",
+        "324",
+        "32"
+      ],
+      [
+        "E5",
+        "13",
+        "421",
+        "42"
+      ],
+      [
+        "E6",
+        "18",
+        "486",
+        "49"
+      ],
+      [
+        "E7",
+        "12",
+        "278",
+        "28"
+      ],
+      [
+        "E8",
+        "9",
+        "182",
+        "18"
+      ],
+      [
+        "E9",
+        "4",
+        "72",
+        "7"
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/brutos.xlsx",
+    "sheet_index": 13,
+    "sheet_name": "13. DIC-Sampling",
+    "used_range": "A1:B25",
+    "rows": 25,
+    "columns": 2,
+    "preview": [
+      [
+        "Tanque",
+        "TR-R"
+      ],
+      [
+        "Tanq1",
+        "TR1R1"
+      ],
+      [
+        "Tanq2",
+        "TR1R2"
+      ],
+      [
+        "Tanq3",
+        "TR1R3"
+      ],
+      [
+        "Tanq4",
+        "TR1R4"
+      ],
+      [
+        "Tanq5",
+        "TR1R5"
+      ],
+      [
+        "Tanq6",
+        "TR2R1"
+      ],
+      [
+        "Tanq7",
+        "TR2R2"
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/brutos.xlsx",
+    "sheet_index": 14,
+    "sheet_name": "14. Amost-Stratificada",
+    "used_range": "A1:C8",
+    "rows": 8,
+    "columns": 3,
+    "preview": [
+      [
+        "Linheiro",
+        "Crqueiro",
+        "Arrasteiro"
+      ],
+      [
+        "2",
+        "7",
+        "20"
+      ],
+      [
+        "3",
+        "8",
+        "23"
+      ],
+      [
+        "4",
+        "9",
+        "26"
+      ],
+      [
+        "5",
+        "10",
+        ""
+      ],
+      [
+        "6",
+        "11",
+        ""
+      ],
+      [
+        "",
+        "12",
+        ""
+      ],
+      [
+        "",
+        "13",
+        ""
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/brutos.xlsx",
+    "sheet_index": 15,
+    "sheet_name": "15.Cangulo",
+    "used_range": "A1:G17",
+    "rows": 17,
+    "columns": 7,
+    "preview": [
+      [
+        "Comprimento (cm)",
+        "P1",
+        "P2",
+        "P3",
+        "Peso(g)",
+        "ln(Peso)",
+        "ln(Comp)"
+      ],
+      [
+        "12",
+        "40.5",
+        "43.7",
+        "44.8",
+        "43",
+        "2.484906649788",
+        "3.76120011569356"
+      ],
+      [
+        "14",
+        "65.4",
+        "70.2",
+        "68.7",
+        "68.1",
+        "2.63905732961526",
+        "4.22097721315547"
+      ],
+      [
+        "16",
+        "95.6",
+        "106.3",
+        "98.4",
+        "100.1",
+        "2.77258872223978",
+        "4.60616968632117"
+      ],
+      [
+        "18",
+        "128.5",
+        "139.8",
+        "134",
+        "134.1",
+        "2.89037175789616",
+        "4.89858579028763"
+      ],
+      [
+        "20",
+        "180",
+        "203.1",
+        "195.6",
+        "192.9",
+        "2.99573227355399",
+        "5.26217191991168"
+      ],
+      [
+        "22",
+        "248.6",
+        "247.5",
+        "267.1",
+        "254.4",
+        "3.09104245335832",
+        "5.53890783146597"
+      ],
+      [
+        "24",
+        "303.7",
+        "318.9",
+        "325.4",
+        "316",
+        "3.17805383034795",
+        "5.75574221358691"
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/brutos.xlsx",
+    "sheet_index": 16,
+    "sheet_name": "16. RegLinAL",
+    "used_range": "A1:B11",
+    "rows": 11,
+    "columns": 2,
+    "preview": [
+      [
+        "Ac. Linoléico",
+        "[Superfície]"
+      ],
+      [
+        "0.2",
+        "2.88"
+      ],
+      [
+        "0.2",
+        "1.72"
+      ],
+      [
+        "0.6",
+        "4.7"
+      ],
+      [
+        "0.6",
+        "5.28"
+      ],
+      [
+        "1",
+        "10.92"
+      ],
+      [
+        "1",
+        "7.7"
+      ],
+      [
+        "1.4",
+        "12.35"
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/brutos.xlsx",
+    "sheet_index": 17,
+    "sheet_name": "17.Chi.Camarao",
+    "used_range": "A1:F171",
+    "rows": 171,
+    "columns": 6,
+    "preview": [
+      [
+        "Sexo",
+        "Especie",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Macho",
+        "P.brasiliensis",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Macho",
+        "P.brasiliensis",
+        "",
+        "",
+        "P. brasiliensis",
+        "P. schimitti"
+      ],
+      [
+        "Macho",
+        "P.brasiliensis",
+        "",
+        "Macho",
+        "48",
+        "52"
+      ],
+      [
+        "Macho",
+        "P.brasiliensis",
+        "",
+        "Fêmea",
+        "45",
+        "25"
+      ],
+      [
+        "Macho",
+        "P.brasiliensis",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Macho",
+        "P.brasiliensis",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Macho",
+        "P.brasiliensis",
+        "",
+        "",
+        "",
+        ""
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/brutos.xlsx",
+    "sheet_index": 18,
+    "sheet_name": "18. Artemia",
+    "used_range": "A1:B15",
+    "rows": 15,
+    "columns": 2,
+    "preview": [
+      [
+        "Ração",
+        "Taxa"
+      ],
+      [
+        "A",
+        "4.2"
+      ],
+      [
+        "A",
+        "3.6"
+      ],
+      [
+        "A",
+        "4.6"
+      ],
+      [
+        "A",
+        "4.3"
+      ],
+      [
+        "A",
+        "4.1"
+      ],
+      [
+        "A",
+        "3.5"
+      ],
+      [
+        "A",
+        "4.3"
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/brutos.xlsx",
+    "sheet_index": 19,
+    "sheet_name": "19.Isoproteica",
+    "used_range": "A1:B20",
+    "rows": 20,
+    "columns": 2,
+    "preview": [
+      [
+        "Ração",
+        "Peso"
+      ],
+      [
+        "A",
+        "86"
+      ],
+      [
+        "A",
+        "83"
+      ],
+      [
+        "A",
+        "91"
+      ],
+      [
+        "A",
+        "84"
+      ],
+      [
+        "A",
+        "87"
+      ],
+      [
+        "B",
+        "88"
+      ],
+      [
+        "B",
+        "87"
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/brutos.xlsx",
+    "sheet_index": 20,
+    "sheet_name": "Testes de normalidade1_HID",
+    "used_range": "A1:D13",
+    "rows": 13,
+    "columns": 4,
+    "preview": [
+      [
+        "0.0769230769230769",
+        "0.0632519638033484",
+        "-0.30698766881973",
+        "-0.326768157893359"
+      ],
+      [
+        "0.153846153846154",
+        "0.0716733708329493",
+        "-0.294010569583089",
+        "-0.230244325586363"
+      ],
+      [
+        "0.230769230769231",
+        "0.0923115091666559",
+        "-0.266529653552555",
+        "-0.168575193664824"
+      ],
+      [
+        "0.307692307692308",
+        "0.141842180816298",
+        "-0.215384615384616",
+        "-0.119771330084618"
+      ],
+      [
+        "0.384615384615385",
+        "0.268906288962381",
+        "-0.123781561949501",
+        "-0.0772195332246788"
+      ],
+      [
+        "0.461538461538462",
+        "0.607569009938259",
+        "0.0548443922489725",
+        "-0.0379034723695696"
+      ],
+      [
+        "0.538461538461539",
+        "0.627857191877348",
+        "0.0655314151497355",
+        "-1.04282729408548e-16"
+      ],
+      [
+        "0.615384615384615",
+        "0.750400014936195",
+        "0.135760422783323",
+        "0.0379034723695695"
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/brutos.xlsx",
+    "sheet_index": 21,
+    "sheet_name": "ANCOVA_HID",
+    "used_range": "B2:F4",
+    "rows": 3,
+    "columns": 5,
+    "preview": [
+      [
+        "Categoria",
+        "Média LS",
+        "Erro padrão",
+        "Limite inferior (95%)",
+        "Limite superior (95%)"
+      ],
+      [
+        "f",
+        "102.111742888966",
+        "1.18210145286968",
+        "99.7828214056443",
+        "104.440664372288"
+      ],
+      [
+        "m",
+        "100.599972534322",
+        "1.10807891884864",
+        "98.4168868160383",
+        "102.783058252607"
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/brutos.xlsx",
+    "sheet_index": 22,
+    "sheet_name": "ANCOVA1_HID",
+    "used_range": "B2:F4",
+    "rows": 3,
+    "columns": 5,
+    "preview": [
+      [
+        "Categoria",
+        "Média LS",
+        "Erro padrão",
+        "Limite inferior (95%)",
+        "Limite superior (95%)"
+      ],
+      [
+        "f",
+        "101.487450269815",
+        "1.15063463422169",
+        "99.2204726761768",
+        "103.754427863453"
+      ],
+      [
+        "m",
+        "101.149944603575",
+        "1.07755585265641",
+        "99.0269466499125",
+        "103.272942557237"
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/brutos.xlsx",
+    "sheet_index": 23,
+    "sheet_name": "ANCOVA2_HID",
+    "used_range": "B2:F5",
+    "rows": 4,
+    "columns": 5,
+    "preview": [
+      [
+        "Categoria",
+        "Média LS",
+        "Erro padrão",
+        "Limite inferior (95%)",
+        "Limite superior (95%)"
+      ],
+      [
+        "setosa",
+        "0.774974190562246",
+        "0.0830347182221744",
+        "0.61086888602343",
+        "0.939079495101061"
+      ],
+      [
+        "versicolor",
+        "1.21034449317846",
+        "0.0307274041493876",
+        "1.14961652151087",
+        "1.27107246484605"
+      ],
+      [
+        "virginica",
+        "1.61268131625929",
+        "0.066789105103487",
+        "1.48068295861381",
+        "1.74467967390478"
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/brutos.xlsx",
+    "sheet_index": 24,
+    "sheet_name": "ANOVA_HID",
+    "used_range": "B2:F6",
+    "rows": 5,
+    "columns": 5,
+    "preview": [
+      [
+        "Categoria",
+        "Média LS",
+        "Erro padrão",
+        "Limite inferior (95%)",
+        "Limite superior (95%)"
+      ],
+      [
+        "R1",
+        "86.2",
+        "1.34561014661256",
+        "83.3318998658791",
+        "89.0681001341209"
+      ],
+      [
+        "R2",
+        "88.8",
+        "1.34561014661256",
+        "85.9318998658791",
+        "91.6681001341209"
+      ],
+      [
+        "R3",
+        "102.5",
+        "1.50443787951957",
+        "99.2933665669147",
+        "105.706633433085"
+      ],
+      [
+        "R4",
+        "92.6",
+        "1.34561014661256",
+        "89.7318998658791",
+        "95.4681001341209"
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/brutos.xlsx",
+    "sheet_index": 25,
+    "sheet_name": "ANCOVA_HID1",
+    "used_range": "B2:F4",
+    "rows": 3,
+    "columns": 5,
+    "preview": [
+      [
+        "Categoria",
+        "Média LS",
+        "Erro padrão",
+        "Limite inferior (95%)",
+        "Limite superior (95%)"
+      ],
+      [
+        "ex",
+        "78.4067726124945",
+        "0.51528107740848",
+        "77.3512671735213",
+        "79.4622780514678"
+      ],
+      [
+        "niv",
+        "68.3414813779456",
+        "0.46173308094242",
+        "67.3956640373599",
+        "69.2872987185312"
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/brutos.xlsx",
+    "sheet_index": 26,
+    "sheet_name": "ANOVA_HID1",
+    "used_range": "B2:F23",
+    "rows": 22,
+    "columns": 5,
+    "preview": [
+      [
+        "Categoria",
+        "Média LS",
+        "Erro padrão",
+        "Limite inferior (95%)",
+        "Limite superior (95%)"
+      ],
+      [
+        "treatA",
+        "46.2",
+        "1.05577775439089",
+        "43.8996578866332",
+        "48.5003421133668"
+      ],
+      [
+        "treatB",
+        "49.6",
+        "1.05577775439089",
+        "47.2996578866332",
+        "51.9003421133668"
+      ],
+      [
+        "treatC",
+        "51.6",
+        "1.05577775439089",
+        "49.2996578866332",
+        "53.9003421133668"
+      ],
+      [
+        "treatD",
+        "49.2",
+        "1.05577775439089",
+        "46.8996578866332",
+        "51.5003421133668"
+      ],
+      [
+        "treatE",
+        "46.2",
+        "1.05577775439089",
+        "43.8996578866332",
+        "48.5003421133668"
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/data-raw/aulas_bioestatistica_ORIGINAL.xlsx",
+    "error": "Comment createdAt is required."
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/data-raw/dados_brutos_eapadados.xlsx",
+    "sheet_index": 1,
+    "sheet_name": "Índice",
+    "used_range": "A1:F41",
+    "rows": 41,
+    "columns": 6,
+    "preview": [
+      [
+        "Índice de conjuntos de dados — aulas de Bioestatística",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "#",
+        "Aba",
+        "Conjunto / contexto",
+        "n (obs.)",
+        "Variáveis",
+        "Técnica estatística sugerida"
+      ],
+      [
+        "1",
+        "1_bezerro_1am",
+        "Pesos de bezerros (amostra única)",
+        "",
+        "peso",
+        "Descritiva / teste t (1 amostra)"
+      ],
+      [
+        "2",
+        "2_bezero_2am",
+        "Peso por raça (Guzerá × Gir)",
+        "",
+        "raca, peso",
+        "Teste t (2 amostras independentes)"
+      ],
+      [
+        "3",
+        "4_raca_isop",
+        "Peso por tipo de ração (A–D)",
+        "",
+        "racao, peso",
+        "ANOVA (DIC)"
+      ],
+      [
+        "4",
+        "5_cult_tilapia",
+        "Produtividade por sistema de cultivo",
+        "",
+        "cultura, produtividade",
+        "ANOVA (DIC)"
+      ],
+      [
+        "5",
+        "6_crabs",
+        "Morfometria de caranguejos por espécie/sexo",
+        "",
+        "especie, sexo, FL, RW, CL, CW, BD",
+        "Multivariada / regressão"
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/data-raw/dados_brutos_eapadados.xlsx",
+    "sheet_index": 2,
+    "sheet_name": "1_bezerro_1am",
+    "used_range": "A1:A11",
+    "rows": 11,
+    "columns": 1,
+    "preview": [
+      [
+        "peso"
+      ],
+      [
+        "178"
+      ],
+      [
+        "199"
+      ],
+      [
+        "182"
+      ],
+      [
+        "186"
+      ],
+      [
+        "188"
+      ],
+      [
+        "191"
+      ],
+      [
+        "189"
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/data-raw/dados_brutos_eapadados.xlsx",
+    "sheet_index": 3,
+    "sheet_name": "2_bezero_2am",
+    "used_range": "A1:D21",
+    "rows": 21,
+    "columns": 4,
+    "preview": [
+      [
+        "raca",
+        "peso",
+        "",
+        ""
+      ],
+      [
+        "Guzerá",
+        "30",
+        "",
+        ""
+      ],
+      [
+        "Guzerá",
+        "26",
+        "",
+        ""
+      ],
+      [
+        "Guzerá",
+        "25",
+        "",
+        ""
+      ],
+      [
+        "Guzerá",
+        "23",
+        "",
+        ""
+      ],
+      [
+        "Guzerá",
+        "25",
+        "",
+        ""
+      ],
+      [
+        "Guzerá",
+        "29",
+        "",
+        ""
+      ],
+      [
+        "Guzerá",
+        "34",
+        "",
+        ""
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/data-raw/dados_brutos_eapadados.xlsx",
+    "sheet_index": 4,
+    "sheet_name": "4_raca_isop",
+    "used_range": "A1:B17",
+    "rows": 17,
+    "columns": 2,
+    "preview": [
+      [
+        "racao",
+        "peso"
+      ],
+      [
+        "A",
+        "150.6"
+      ],
+      [
+        "A",
+        "128.9"
+      ],
+      [
+        "A",
+        "137.2"
+      ],
+      [
+        "A",
+        "130.5"
+      ],
+      [
+        "B",
+        "225.1"
+      ],
+      [
+        "B",
+        "210.6"
+      ],
+      [
+        "B",
+        "218.5"
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/data-raw/dados_brutos_eapadados.xlsx",
+    "sheet_index": 5,
+    "sheet_name": "5_cult_tilapia",
+    "used_range": "A1:B17",
+    "rows": 17,
+    "columns": 2,
+    "preview": [
+      [
+        "cultura",
+        "produtividade"
+      ],
+      [
+        "CM",
+        "1.4"
+      ],
+      [
+        "CM",
+        "1.2"
+      ],
+      [
+        "CM",
+        "1.5"
+      ],
+      [
+        "CM",
+        "1.6"
+      ],
+      [
+        "TM",
+        "2.5"
+      ],
+      [
+        "TM",
+        "3"
+      ],
+      [
+        "TM",
+        "2.8"
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/data-raw/dados_brutos_eapadados.xlsx",
+    "sheet_index": 6,
+    "sheet_name": "6_crabs",
+    "used_range": "A1:I157",
+    "rows": 157,
+    "columns": 9,
+    "preview": [
+      [
+        "especie",
+        "sexo",
+        "FL",
+        "RW",
+        "CL",
+        "CW",
+        "BD",
+        "",
+        ""
+      ],
+      [
+        "azul",
+        "M",
+        "8.1",
+        "6.7",
+        "16.1",
+        "19",
+        "7",
+        "",
+        ""
+      ],
+      [
+        "azul",
+        "M",
+        "8.8",
+        "7.7",
+        "18.1",
+        "20.8",
+        "7.4",
+        "",
+        ""
+      ],
+      [
+        "azul",
+        "M",
+        "9.2",
+        "7.8",
+        "19",
+        "22.4",
+        "7.7",
+        "",
+        ""
+      ],
+      [
+        "azul",
+        "M",
+        "9.6",
+        "7.9",
+        "20.1",
+        "23.1",
+        "8.2",
+        "",
+        ""
+      ],
+      [
+        "azul",
+        "M",
+        "10.8",
+        "9",
+        "23",
+        "26.5",
+        "9.8",
+        "",
+        ""
+      ],
+      [
+        "azul",
+        "M",
+        "11.6",
+        "9.1",
+        "24.5",
+        "28.4",
+        "10.4",
+        "",
+        ""
+      ],
+      [
+        "azul",
+        "M",
+        "11.8",
+        "10.5",
+        "25.2",
+        "29.3",
+        "10.3",
+        "",
+        ""
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/data-raw/dados_brutos_eapadados.xlsx",
+    "sheet_index": 7,
+    "sheet_name": "7_dens_tilap",
+    "used_range": "A1:B22",
+    "rows": 22,
+    "columns": 2,
+    "preview": [
+      [
+        "densidade",
+        "taxa"
+      ],
+      [
+        "A",
+        "4.9"
+      ],
+      [
+        "A",
+        "4.1"
+      ],
+      [
+        "A",
+        "10.7"
+      ],
+      [
+        "A",
+        "8.4"
+      ],
+      [
+        "A",
+        "5.8"
+      ],
+      [
+        "A",
+        "9.1"
+      ],
+      [
+        "A",
+        "6.8"
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/data-raw/dados_brutos_eapadados.xlsx",
+    "sheet_index": 8,
+    "sheet_name": "10_caranguejos",
+    "used_range": "A1:E994",
+    "rows": 994,
+    "columns": 5,
+    "preview": [
+      [
+        "local",
+        "sexo",
+        "estacao",
+        "LC",
+        "CC"
+      ],
+      [
+        "Caratateua",
+        "Macho",
+        "Seca",
+        "60",
+        "56"
+      ],
+      [
+        "Caratateua",
+        "Macho",
+        "Seca",
+        "63",
+        "61"
+      ],
+      [
+        "Caratateua",
+        "Macho",
+        "Seca",
+        "69",
+        "67"
+      ],
+      [
+        "Caratateua",
+        "Macho",
+        "Seca",
+        "65",
+        "62"
+      ],
+      [
+        "Caratateua",
+        "Macho",
+        "Seca",
+        "64",
+        "62"
+      ],
+      [
+        "Caratateua",
+        "Macho",
+        "Seca",
+        "70",
+        "68"
+      ],
+      [
+        "Caratateua",
+        "Macho",
+        "Seca",
+        "60",
+        "58"
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/data-raw/dados_brutos_eapadados.xlsx",
+    "sheet_index": 9,
+    "sheet_name": "11_leite_tuber",
+    "used_range": "A1:C25",
+    "rows": 25,
+    "columns": 3,
+    "preview": [
+      [
+        "rep",
+        "tratamento",
+        "resposta"
+      ],
+      [
+        "1",
+        "Araruta",
+        "35.42"
+      ],
+      [
+        "2",
+        "Araruta",
+        "32.47"
+      ],
+      [
+        "3",
+        "Araruta",
+        "34.48"
+      ],
+      [
+        "4",
+        "Araruta",
+        "33.79"
+      ],
+      [
+        "5",
+        "Araruta",
+        "35.04"
+      ],
+      [
+        "6",
+        "Araruta",
+        "35.19"
+      ],
+      [
+        "1",
+        "Batata Doce",
+        "22.15"
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/data-raw/dados_brutos_eapadados.xlsx",
+    "sheet_index": 10,
+    "sheet_name": "12_caixa_lagosta",
+    "used_range": "A1:D9",
+    "rows": 9,
+    "columns": 4,
+    "preview": [
+      [
+        "estrato",
+        "n_caixas",
+        "Ni",
+        "ni"
+      ],
+      [
+        "E3",
+        "5",
+        "270",
+        "27"
+      ],
+      [
+        "E4",
+        "8",
+        "324",
+        "32"
+      ],
+      [
+        "E5",
+        "13",
+        "421",
+        "42"
+      ],
+      [
+        "E6",
+        "18",
+        "486",
+        "49"
+      ],
+      [
+        "E7",
+        "12",
+        "278",
+        "28"
+      ],
+      [
+        "E8",
+        "9",
+        "182",
+        "18"
+      ],
+      [
+        "E9",
+        "4",
+        "72",
+        "7"
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/data-raw/dados_brutos_eapadados.xlsx",
+    "sheet_index": 11,
+    "sheet_name": "13_amost_dic",
+    "used_range": "A1:B25",
+    "rows": 25,
+    "columns": 2,
+    "preview": [
+      [
+        "tanque",
+        "tr_r"
+      ],
+      [
+        "Tanq1",
+        "TR1R1"
+      ],
+      [
+        "Tanq2",
+        "TR1R2"
+      ],
+      [
+        "Tanq3",
+        "TR1R3"
+      ],
+      [
+        "Tanq4",
+        "TR1R4"
+      ],
+      [
+        "Tanq5",
+        "TR1R5"
+      ],
+      [
+        "Tanq6",
+        "TR2R1"
+      ],
+      [
+        "Tanq7",
+        "TR2R2"
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/data-raw/dados_brutos_eapadados.xlsx",
+    "sheet_index": 12,
+    "sheet_name": "14_cangulo_regs",
+    "used_range": "A1:G17",
+    "rows": 17,
+    "columns": 7,
+    "preview": [
+      [
+        "comprimento",
+        "P1",
+        "P2",
+        "P3",
+        "peso",
+        "ln_comprimento",
+        "ln_peso"
+      ],
+      [
+        "12",
+        "40.5",
+        "43.7",
+        "44.8",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "65.4",
+        "70.2",
+        "68.7",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "95.6",
+        "106.3",
+        "98.4",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "128.5",
+        "139.8",
+        "134",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "180",
+        "203.1",
+        "195.6",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "248.6",
+        "247.5",
+        "267.1",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "303.7",
+        "318.9",
+        "325.4",
+        "",
+        "",
+        ""
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/data-raw/dados_brutos_eapadados.xlsx",
+    "sheet_index": 13,
+    "sheet_name": "15_demo_tlc",
+    "used_range": "A1:A60",
+    "rows": 60,
+    "columns": 1,
+    "preview": [
+      [
+        "y"
+      ],
+      [
+        "2"
+      ],
+      [
+        "3"
+      ],
+      [
+        "6"
+      ],
+      [
+        "7"
+      ],
+      [
+        "4"
+      ],
+      [
+        "9"
+      ],
+      [
+        "5"
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/data-raw/dados_brutos_eapadados.xlsx",
+    "sheet_index": 14,
+    "sheet_name": "16_pulgoes",
+    "used_range": "A1:B31",
+    "rows": 31,
+    "columns": 2,
+    "preview": [
+      [
+        "tratamento",
+        "resposta"
+      ],
+      [
+        "A",
+        "2370"
+      ],
+      [
+        "A",
+        "1687"
+      ],
+      [
+        "A",
+        "2592"
+      ],
+      [
+        "A",
+        "2283"
+      ],
+      [
+        "A",
+        "2910"
+      ],
+      [
+        "A",
+        "3020"
+      ],
+      [
+        "B",
+        "1282"
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/data-raw/dados_brutos_eapadados.xlsx",
+    "sheet_index": 15,
+    "sheet_name": "17_qui2_camar",
+    "used_range": "A1:C3",
+    "rows": 3,
+    "columns": 3,
+    "preview": [
+      [
+        "sexo",
+        "P_brasiliensis",
+        "P_schimitti"
+      ],
+      [
+        "Macho",
+        "48",
+        "52"
+      ],
+      [
+        "Fêmea",
+        "45",
+        "25"
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/data-raw/dados_brutos_eapadados.xlsx",
+    "sheet_index": 16,
+    "sheet_name": "19_cvf",
+    "used_range": "A1:C11",
+    "rows": 11,
+    "columns": 3,
+    "preview": [
+      [
+        "paciente",
+        "placebo",
+        "droga"
+      ],
+      [
+        "1",
+        "224",
+        "213"
+      ],
+      [
+        "2",
+        "80",
+        "95"
+      ],
+      [
+        "3",
+        "75",
+        "33"
+      ],
+      [
+        "4",
+        "541",
+        "440"
+      ],
+      [
+        "5",
+        "74",
+        "-32"
+      ],
+      [
+        "6",
+        "85",
+        "-28"
+      ],
+      [
+        "7",
+        "293",
+        "445"
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/data-raw/dados_brutos_eapadados.xlsx",
+    "sheet_index": 17,
+    "sheet_name": "20_ira",
+    "used_range": "A1:B12",
+    "rows": 12,
+    "columns": 2,
+    "preview": [
+      [
+        "ira",
+        "creatinina"
+      ],
+      [
+        "S",
+        "0.9"
+      ],
+      [
+        "S",
+        "0.8"
+      ],
+      [
+        "S",
+        "0.6"
+      ],
+      [
+        "S",
+        "0.7"
+      ],
+      [
+        "S",
+        "0.8"
+      ],
+      [
+        "C",
+        "3.3"
+      ],
+      [
+        "C",
+        "3"
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/data-raw/dados_brutos_eapadados.xlsx",
+    "sheet_index": 18,
+    "sheet_name": "21_banana_larva_chi2",
+    "used_range": "A1:D3",
+    "rows": 3,
+    "columns": 4,
+    "preview": [
+      [
+        "larva",
+        "variedade1",
+        "variedade2",
+        "variedade3"
+      ],
+      [
+        "Larva-Não",
+        "102",
+        "225",
+        "14"
+      ],
+      [
+        "Larva-Sim",
+        "14",
+        "26",
+        "6"
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/data-raw/dados_brutos_eapadados.xlsx",
+    "sheet_index": 19,
+    "sheet_name": "22_moscas",
+    "used_range": "A1:B16",
+    "rows": 16,
+    "columns": 2,
+    "preview": [
+      [
+        "tipo",
+        "densidade"
+      ],
+      [
+        "Erv",
+        "14"
+      ],
+      [
+        "Erv",
+        "12.1"
+      ],
+      [
+        "Erv",
+        "9.6"
+      ],
+      [
+        "Erv",
+        "8.2"
+      ],
+      [
+        "Erv",
+        "10.2"
+      ],
+      [
+        "Arb",
+        "8.4"
+      ],
+      [
+        "Arb",
+        "5.1"
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/data-raw/dados_brutos_eapadados.xlsx",
+    "sheet_index": 20,
+    "sheet_name": "23_pardais",
+    "used_range": "A1:Q22",
+    "rows": 22,
+    "columns": 17,
+    "preview": [
+      [
+        "idade",
+        "ca",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "3",
+        "1.4",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "4",
+        "1.5",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "5",
+        "2.2",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "6",
+        "2.4",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "8",
+        "3.1",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "9",
+        "3.2",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "10",
+        "3.2",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/data-raw/dados_brutos_eapadados.xlsx",
+    "sheet_index": 21,
+    "sheet_name": "24_Bagres",
+    "used_range": "A1:B20",
+    "rows": 20,
+    "columns": 2,
+    "preview": [
+      [
+        "racao",
+        "peso"
+      ],
+      [
+        "A",
+        "86"
+      ],
+      [
+        "A",
+        "83"
+      ],
+      [
+        "A",
+        "91"
+      ],
+      [
+        "A",
+        "84"
+      ],
+      [
+        "A",
+        "87"
+      ],
+      [
+        "B",
+        "88"
+      ],
+      [
+        "B",
+        "87"
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/data-raw/dados_brutos_eapadados.xlsx",
+    "sheet_index": 22,
+    "sheet_name": "src_caranguejos",
+    "used_range": "A1:E994",
+    "rows": 994,
+    "columns": 5,
+    "preview": [
+      [
+        "Local",
+        "Sexo",
+        "Estacao",
+        "LC",
+        "CC"
+      ],
+      [
+        "Caratateua",
+        "Macho",
+        "Seca",
+        "60",
+        "56"
+      ],
+      [
+        "Caratateua",
+        "Macho",
+        "Seca",
+        "63",
+        "61"
+      ],
+      [
+        "Caratateua",
+        "Macho",
+        "Seca",
+        "69",
+        "67"
+      ],
+      [
+        "Caratateua",
+        "Macho",
+        "Seca",
+        "65",
+        "62"
+      ],
+      [
+        "Caratateua",
+        "Macho",
+        "Seca",
+        "64",
+        "62"
+      ],
+      [
+        "Caratateua",
+        "Macho",
+        "Seca",
+        "70",
+        "68"
+      ],
+      [
+        "Caratateua",
+        "Macho",
+        "Seca",
+        "60",
+        "58"
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/data-raw/dados_brutos_eapadados.xlsx",
+    "sheet_index": 23,
+    "sheet_name": "src_cangulo",
+    "used_range": "A1:G17",
+    "rows": 17,
+    "columns": 7,
+    "preview": [
+      [
+        "Comprimento (cm)",
+        "P1",
+        "P2",
+        "P3",
+        "Peso(g)",
+        "ln(Peso)",
+        "ln(Comp)"
+      ],
+      [
+        "12",
+        "40.5",
+        "43.7",
+        "44.8",
+        "43",
+        "2.484906649788",
+        "3.76120011569356"
+      ],
+      [
+        "14",
+        "65.4",
+        "70.2",
+        "68.7",
+        "68.1",
+        "2.63905732961526",
+        "4.22097721315547"
+      ],
+      [
+        "16",
+        "95.6",
+        "106.3",
+        "98.4",
+        "100.1",
+        "2.77258872223978",
+        "4.60616968632117"
+      ],
+      [
+        "18",
+        "128.5",
+        "139.8",
+        "134",
+        "134.1",
+        "2.89037175789616",
+        "4.89858579028763"
+      ],
+      [
+        "20",
+        "180",
+        "203.1",
+        "195.6",
+        "192.9",
+        "2.99573227355399",
+        "5.26217191991168"
+      ],
+      [
+        "22",
+        "248.6",
+        "247.5",
+        "267.1",
+        "254.4",
+        "3.09104245335832",
+        "5.53890783146597"
+      ],
+      [
+        "24",
+        "303.7",
+        "318.9",
+        "325.4",
+        "316",
+        "3.17805383034795",
+        "5.75574221358691"
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/data-raw/dados_brutos_eapadados.xlsx",
+    "sheet_index": 24,
+    "sheet_name": "src_camaroes_sexo",
+    "used_range": "A1:B171",
+    "rows": 171,
+    "columns": 2,
+    "preview": [
+      [
+        "Sexo",
+        "Especie"
+      ],
+      [
+        "Macho",
+        "P.brasiliensis"
+      ],
+      [
+        "Macho",
+        "P.brasiliensis"
+      ],
+      [
+        "Macho",
+        "P.brasiliensis"
+      ],
+      [
+        "Macho",
+        "P.brasiliensis"
+      ],
+      [
+        "Macho",
+        "P.brasiliensis"
+      ],
+      [
+        "Macho",
+        "P.brasiliensis"
+      ],
+      [
+        "Macho",
+        "P.brasiliensis"
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/data-raw/dados_brutos_eapadados.xlsx",
+    "sheet_index": 25,
+    "sheet_name": "src_artemia",
+    "used_range": "A1:B15",
+    "rows": 15,
+    "columns": 2,
+    "preview": [
+      [
+        "Ração",
+        "Taxa"
+      ],
+      [
+        "A",
+        "4.2"
+      ],
+      [
+        "A",
+        "3.6"
+      ],
+      [
+        "A",
+        "4.6"
+      ],
+      [
+        "A",
+        "4.3"
+      ],
+      [
+        "A",
+        "4.1"
+      ],
+      [
+        "A",
+        "3.5"
+      ],
+      [
+        "A",
+        "4.3"
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/data-raw/dados_brutos_eapadados.xlsx",
+    "sheet_index": 26,
+    "sheet_name": "src_isoproteica",
+    "used_range": "A1:B20",
+    "rows": 20,
+    "columns": 2,
+    "preview": [
+      [
+        "Ração",
+        "Peso"
+      ],
+      [
+        "A",
+        "86"
+      ],
+      [
+        "A",
+        "83"
+      ],
+      [
+        "A",
+        "91"
+      ],
+      [
+        "A",
+        "84"
+      ],
+      [
+        "A",
+        "87"
+      ],
+      [
+        "B",
+        "88"
+      ],
+      [
+        "B",
+        "87"
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/data-raw/dados_brutos_eapadados.xlsx",
+    "sheet_index": 27,
+    "sheet_name": "brine_carbonatos",
+    "used_range": "A1:H20",
+    "rows": 20,
+    "columns": 8,
+    "preview": [
+      [
+        "amostra",
+        "grupo",
+        "HCO3",
+        "SO4",
+        "Cl",
+        "Ca",
+        "Mg",
+        "Na"
+      ],
+      [
+        "E01",
+        "Ellenburger_Dolomite",
+        "10.4",
+        "30",
+        "967.1",
+        "95.9",
+        "53.7",
+        "857.7"
+      ],
+      [
+        "E02",
+        "Ellenburger_Dolomite",
+        "6.2",
+        "29.6",
+        "1174.9",
+        "111.7",
+        "43.9",
+        "1054.7"
+      ],
+      [
+        "E03",
+        "Ellenburger_Dolomite",
+        "2.1",
+        "11.4",
+        "2387.1",
+        "348.3",
+        "119.3",
+        "1932.4"
+      ],
+      [
+        "E04",
+        "Ellenburger_Dolomite",
+        "8.5",
+        "22.5",
+        "2186.1",
+        "339.6",
+        "73.6",
+        "1803.4"
+      ],
+      [
+        "E05",
+        "Ellenburger_Dolomite",
+        "6.7",
+        "32.8",
+        "2015.5",
+        "287.6",
+        "75.1",
+        "1691.8"
+      ],
+      [
+        "E06",
+        "Ellenburger_Dolomite",
+        "3.8",
+        "18.9",
+        "2175.8",
+        "340.4",
+        "63.8",
+        "1793.9"
+      ],
+      [
+        "E07",
+        "Ellenburger_Dolomite",
+        "1.5",
+        "16.5",
+        "2367",
+        "412",
+        "95.8",
+        "1872.5"
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/data-raw/dados_brutos_eapadados.xlsx",
+    "sheet_index": 28,
+    "sheet_name": "cabritos_fa_coltro",
+    "used_range": "A1:J33",
+    "rows": 33,
+    "columns": 10,
+    "preview": [
+      [
+        "amostra",
+        "tratamento",
+        "energia_mj_kg",
+        "n3",
+        "n6",
+        "n6_n3",
+        "sfa",
+        "mufa",
+        "pufa",
+        "pufa_sfa"
+      ],
+      [
+        "1",
+        "T1",
+        "9.6",
+        "0.2641",
+        "3.7498",
+        "14.1964",
+        "50.8125",
+        "41.5846",
+        "7.6029",
+        "0.1496"
+      ],
+      [
+        "2",
+        "T1",
+        "9.6",
+        "0.2686",
+        "3.7584",
+        "13.9931",
+        "50.9835",
+        "41.5317",
+        "7.4848",
+        "0.1468"
+      ],
+      [
+        "3",
+        "T1",
+        "9.6",
+        "0.2534",
+        "3.7288",
+        "14.7119",
+        "51.2187",
+        "41.1364",
+        "7.6448",
+        "0.1493"
+      ],
+      [
+        "4",
+        "T1",
+        "9.6",
+        "0.2646",
+        "3.8066",
+        "14.3885",
+        "50.1781",
+        "41.9751",
+        "7.8568",
+        "0.1538"
+      ],
+      [
+        "5",
+        "T1",
+        "9.6",
+        "0.2674",
+        "3.7707",
+        "14.1003",
+        "51.4442",
+        "41.1296",
+        "7.4348",
+        "0.1445"
+      ],
+      [
+        "6",
+        "T1",
+        "9.6",
+        "0.2647",
+        "3.7492",
+        "14.1617",
+        "51.7418",
+        "40.8164",
+        "7.4419",
+        "0.1439"
+      ],
+      [
+        "7",
+        "T1",
+        "9.6",
+        "0.2615",
+        "3.711",
+        "14.1934",
+        "49.691",
+        "42.6104",
+        "7.6985",
+        "0.1549"
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/data-raw/dados_brutos_eapadados.xlsx",
+    "sheet_index": 29,
+    "sheet_name": "captura_pescada_amarela_bruta",
+    "used_range": "A1:P253",
+    "rows": 253,
+    "columns": 16,
+    "preview": [
+      [
+        "Embarcacao",
+        "Tamanho (m)",
+        "Precipitação",
+        "Mês",
+        "Ano",
+        "Período sazonal",
+        "Mês/ano",
+        "Data de Saida",
+        "Data de Chegada",
+        "Dias ao mar",
+        "CPUE pescada",
+        "CPUE"
+      ],
+      [
+        "B1",
+        "16",
+        "370.8",
+        "Janeiro",
+        "2019",
+        "chuvoso",
+        "43466",
+        "43470",
+        "43489",
+        "19",
+        "",
+        ""
+      ],
+      [
+        "B1",
+        "16",
+        "426.6",
+        "Fevereiro",
+        "2019",
+        "chuvoso",
+        "43497",
+        "43499",
+        "43520",
+        "21",
+        "",
+        ""
+      ],
+      [
+        "B1",
+        "16",
+        "763.8",
+        "Março",
+        "2019",
+        "chuvoso",
+        "43525",
+        "43531",
+        "43554",
+        "23",
+        "",
+        ""
+      ],
+      [
+        "B1",
+        "16",
+        "559.6",
+        "Abril",
+        "2019",
+        "chuvoso",
+        "43556",
+        "43563",
+        "43581",
+        "18",
+        "",
+        ""
+      ],
+      [
+        "B1",
+        "16",
+        "443.4",
+        "Maio",
+        "2019",
+        "chuvoso",
+        "43586",
+        "43594",
+        "43611",
+        "17",
+        "",
+        ""
+      ],
+      [
+        "B1",
+        "16",
+        "253.6",
+        "Junho",
+        "2019",
+        "chuvoso",
+        "43617",
+        "43623",
+        "43645",
+        "22",
+        "",
+        ""
+      ],
+      [
+        "B1",
+        "16",
+        "156.2",
+        "Julho",
+        "2019",
+        "seco",
+        "43647",
+        "43657",
+        "43673",
+        "16",
+        "",
+        ""
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/data-raw/dados_brutos_eapadados.xlsx",
+    "sheet_index": 30,
+    "sheet_name": "camarao_vannamei_biometria",
+    "used_range": "A1:I171",
+    "rows": 171,
+    "columns": 9,
+    "preview": [
+      [
+        "id_camarao",
+        "base",
+        "origem",
+        "arquivo_origem",
+        "amostra",
+        "comprimento_cm",
+        "cefalotorax_cm",
+        "peso_g",
+        "imagem_completa"
+      ],
+      [
+        "DB1_001",
+        "DB1",
+        "fazenda_industrial",
+        "DB1_INDUSTRIAL_FARM_1.xlsx",
+        "1",
+        "12.2",
+        "",
+        "33",
+        "1"
+      ],
+      [
+        "DB1_002",
+        "DB1",
+        "fazenda_industrial",
+        "DB1_INDUSTRIAL_FARM_1.xlsx",
+        "2",
+        "14.4",
+        "",
+        "33",
+        "1"
+      ],
+      [
+        "DB1_003",
+        "DB1",
+        "fazenda_industrial",
+        "DB1_INDUSTRIAL_FARM_1.xlsx",
+        "3",
+        "12.24",
+        "",
+        "31",
+        "1"
+      ],
+      [
+        "DB1_004",
+        "DB1",
+        "fazenda_industrial",
+        "DB1_INDUSTRIAL_FARM_1.xlsx",
+        "4",
+        "12.4",
+        "",
+        "34",
+        "0"
+      ],
+      [
+        "DB1_005",
+        "DB1",
+        "fazenda_industrial",
+        "DB1_INDUSTRIAL_FARM_1.xlsx",
+        "5",
+        "11",
+        "",
+        "19",
+        "0"
+      ],
+      [
+        "DB1_006",
+        "DB1",
+        "fazenda_industrial",
+        "DB1_INDUSTRIAL_FARM_1.xlsx",
+        "6",
+        "12.36",
+        "",
+        "32",
+        "1"
+      ],
+      [
+        "DB1_007",
+        "DB1",
+        "fazenda_industrial",
+        "DB1_INDUSTRIAL_FARM_1.xlsx",
+        "7",
+        "10.44",
+        "",
+        "23",
+        "1"
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/data-raw/dados_brutos_eapadados.xlsx",
+    "sheet_index": 31,
+    "sheet_name": "aquicultura_br",
+    "used_range": "A1:E217",
+    "rows": 217,
+    "columns": 5,
+    "preview": [
+      [
+        "uf",
+        "estado",
+        "posicao",
+        "producao_t",
+        "ano"
+      ],
+      [
+        "PR",
+        "PARANÁ",
+        "1",
+        "213300",
+        "2023"
+      ],
+      [
+        "SP",
+        "SÃO PAULO",
+        "2",
+        "82400",
+        "2023"
+      ],
+      [
+        "MG",
+        "MINAS GERAIS",
+        "3",
+        "61600",
+        "2023"
+      ],
+      [
+        "RO",
+        "RONDÔNIA",
+        "4",
+        "56500",
+        "2023"
+      ],
+      [
+        "SC",
+        "SANTA CATARINA",
+        "5",
+        "56100",
+        "2023"
+      ],
+      [
+        "MA",
+        "MARANHÃO",
+        "6",
+        "49143",
+        "2023"
+      ],
+      [
+        "MT",
+        "MATO GROSSO",
+        "7",
+        "44900",
+        "2023"
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/data-raw/dados_brutos_eapadados.xlsx",
+    "sheet_index": 32,
+    "sheet_name": "estacoes_ictiofauna",
+    "used_range": "A1:I15",
+    "rows": 15,
+    "columns": 9,
+    "preview": [
+      [
+        "id_estacao",
+        "latitude",
+        "longitude",
+        "ano",
+        "campanha",
+        "ambiente",
+        "especie",
+        "cpue",
+        "abundancia"
+      ],
+      [
+        "E01",
+        "-0.829",
+        "-46.604",
+        "2023",
+        "Seca",
+        "Praia",
+        "Pescada-amarela",
+        "12.4",
+        "31"
+      ],
+      [
+        "E02",
+        "-0.88",
+        "-46.63",
+        "2023",
+        "Seca",
+        "Manguezal",
+        "Bagre",
+        "28.7",
+        "64"
+      ],
+      [
+        "E03",
+        "-0.78",
+        "-46.63",
+        "2023",
+        "Seca",
+        "Estuario",
+        "Robalo",
+        "19.1",
+        "40"
+      ],
+      [
+        "E04",
+        "-0.95",
+        "-46.68",
+        "2023",
+        "Seca",
+        "Manguezal",
+        "Bagre",
+        "22.3",
+        "51"
+      ],
+      [
+        "E05",
+        "-1.0536",
+        "-46.7656",
+        "2023",
+        "Seca",
+        "Estuario",
+        "Pescada-amarela",
+        "15.8",
+        "37"
+      ],
+      [
+        "E06",
+        "-0.616",
+        "-47.356",
+        "2023",
+        "Seca",
+        "Praia",
+        "Robalo",
+        "9.6",
+        "22"
+      ],
+      [
+        "E07",
+        "-0.77",
+        "-47.18",
+        "2023",
+        "Seca",
+        "Plataforma",
+        "Pescada-amarela",
+        "33.5",
+        "70"
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/data-raw/dados_brutos_eapadados.xlsx",
+    "sheet_index": 33,
+    "sheet_name": "sst_costa_norte",
+    "used_range": "A1:E205",
+    "rows": 205,
+    "columns": 5,
+    "preview": [
+      [
+        "lon",
+        "lat",
+        "sst",
+        "clorofila",
+        "profundidade"
+      ],
+      [
+        "-48.5",
+        "-1.5",
+        "27.41",
+        "3.36",
+        "5"
+      ],
+      [
+        "-48.35",
+        "-1.5",
+        "27.59",
+        "3.32",
+        "4.2"
+      ],
+      [
+        "-48.2",
+        "-1.5",
+        "27.52",
+        "3.36",
+        "5.9"
+      ],
+      [
+        "-48.05",
+        "-1.5",
+        "27.51",
+        "3.38",
+        "5.8"
+      ],
+      [
+        "-47.9",
+        "-1.5",
+        "27.56",
+        "3.36",
+        "4.2"
+      ],
+      [
+        "-47.75",
+        "-1.5",
+        "27.53",
+        "3.32",
+        "6"
+      ],
+      [
+        "-47.6",
+        "-1.5",
+        "27.49",
+        "3.39",
+        "5.6"
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/data-raw/dados_brutos_eapadados.xlsx",
+    "sheet_index": 34,
+    "sheet_name": "ocorrencias_peixes",
+    "used_range": "A1:E126",
+    "rows": 126,
+    "columns": 5,
+    "preview": [
+      [
+        "id",
+        "longitude",
+        "latitude",
+        "especie",
+        "ano"
+      ],
+      [
+        "1",
+        "-46.8324",
+        "-0.9809",
+        "Pescada-amarela",
+        "2024"
+      ],
+      [
+        "2",
+        "-46.6701",
+        "-0.8963",
+        "Pescada-amarela",
+        "2023"
+      ],
+      [
+        "3",
+        "-47.3947",
+        "-0.5863",
+        "Camarao-rosa",
+        "2024"
+      ],
+      [
+        "4",
+        "-47.473",
+        "-0.3827",
+        "Camarao-rosa",
+        "2023"
+      ],
+      [
+        "5",
+        "-47.077",
+        "-0.6631",
+        "Camarao-rosa",
+        "2024"
+      ],
+      [
+        "6",
+        "-47.2852",
+        "-1.0134",
+        "Camarao-rosa",
+        "2024"
+      ],
+      [
+        "7",
+        "-47.0228",
+        "-0.5986",
+        "Camarao-rosa",
+        "2023"
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/data-raw/dados_brutos_eapadados.xlsx",
+    "sheet_index": 35,
+    "sheet_name": "cpue_tubarao",
+    "used_range": "A1:E425",
+    "rows": 425,
+    "columns": 5,
+    "preview": [
+      [
+        "Vessel",
+        "Year",
+        "Month",
+        "CPUE",
+        "Data"
+      ],
+      [
+        "MB",
+        "1995",
+        "1",
+        "12.95",
+        "34708"
+      ],
+      [
+        "MC",
+        "1995",
+        "1",
+        "21.2833333333333",
+        "34715"
+      ],
+      [
+        "SB",
+        "1995",
+        "1",
+        "25.74",
+        "34725"
+      ],
+      [
+        "SB",
+        "1995",
+        "2",
+        "4.04",
+        "34751"
+      ],
+      [
+        "SB",
+        "1995",
+        "3",
+        "3.25",
+        "34773"
+      ],
+      [
+        "MB",
+        "1995",
+        "4",
+        "12.5506666666667",
+        "34798"
+      ],
+      [
+        "MC",
+        "1995",
+        "4",
+        "2.72",
+        "34800"
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/data-raw/dados_brutos_eapadados.xlsx",
+    "sheet_index": 36,
+    "sheet_name": "treino_desembarque",
+    "used_range": "A1:H13",
+    "rows": 13,
+    "columns": 8,
+    "preview": [
+      [
+        "Porto",
+        "Especie",
+        "2021 - Captura_t",
+        "2021 - Receita_mil",
+        "2022 - Captura_t",
+        "2022 - Receita_mil",
+        "2023 - Captura_t",
+        "2023 - Receita_mil"
+      ],
+      [
+        "Bragança",
+        "Pargo",
+        "172.6",
+        "2449.3",
+        "184.8",
+        "1843.7",
+        "171.8",
+        "2436.9"
+      ],
+      [
+        "Bragança",
+        "Serra",
+        "150.2",
+        "1795.4",
+        "145.6",
+        "1533.2",
+        "183.9",
+        "1689.3"
+      ],
+      [
+        "Bragança",
+        "Pescada",
+        "101",
+        "1404.8",
+        "89",
+        "1080.9",
+        "83.3",
+        "1256.6"
+      ],
+      [
+        "Vigia",
+        "Pargo",
+        "89.1",
+        "1014.1",
+        "69.6",
+        "1092.8",
+        "76.1",
+        "734.3"
+      ],
+      [
+        "Vigia",
+        "Serra",
+        "61.5",
+        "701.6",
+        "58.8",
+        "547.1",
+        "64.4",
+        "635.9"
+      ],
+      [
+        "Vigia",
+        "Pescada",
+        "113.6",
+        "1255.5",
+        "147.3",
+        "2238.7",
+        "130.9",
+        "1354.3"
+      ],
+      [
+        "Belém",
+        "Pargo",
+        "46.8",
+        "495.9",
+        "53",
+        "506.6",
+        "51.6",
+        "500.9"
+      ]
+    ]
+  },
+  {
+    "source_file": "D:/Claude/eapa/EAPADados/data-raw/dados_brutos_eapadados.xlsx",
+    "sheet_index": 37,
+    "sheet_name": "treino_coletas",
+    "used_range": "A1:E16",
+    "rows": 16,
+    "columns": 5,
+    "preview": [
+      [
+        "id",
+        "codigo_coleta",
+        "estacao_periodo",
+        "comprimento_cm",
+        "peso_g"
+      ],
+      [
+        "1",
+        "SERRA-2023-AUG",
+        "E04_Chuvosa",
+        "26.1",
+        "213.2"
+      ],
+      [
+        "2",
+        "PESCADA-2021-AUG",
+        "E01_Seca",
+        "23.7",
+        "115"
+      ],
+      [
+        "3",
+        "PESCADA-2023-AUG",
+        "E01_Chuvosa",
+        "32.1",
+        "396.4"
+      ],
+      [
+        "4",
+        "PESCADA-2023-BEL",
+        "E01_Seca",
+        "43.2",
+        "818.1"
+      ],
+      [
+        "5",
+        "SERRA-2021-BEL",
+        "E03_Chuvosa",
+        "23.9",
+        "109.4"
+      ],
+      [
+        "6",
+        "PESCADA-2023-BEL",
+        "E02_Seca",
+        "50.2",
+        "1163.1"
+      ],
+      [
+        "7",
+        "PESCADA-2021-VIG",
+        "E03_Seca",
+        "38",
+        "609.9"
+      ]
+    ]
+  }
+]

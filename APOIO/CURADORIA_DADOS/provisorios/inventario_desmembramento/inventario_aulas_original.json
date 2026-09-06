@@ -1,0 +1,233 @@
+[
+  {
+    "sheet_index": 1,
+    "sheet_name": "Índice",
+    "rows": 1,
+    "columns": 1,
+    "preview": [
+      [
+        "Índice de conjuntos de dados — aulas de Bioestatística"
+      ]
+    ]
+  },
+  {
+    "sheet_index": 2,
+    "sheet_name": "1_bezerro_1am",
+    "rows": 1,
+    "columns": 1,
+    "preview": [
+      [
+        "peso"
+      ]
+    ]
+  },
+  {
+    "sheet_index": 3,
+    "sheet_name": "2_bezero_2am",
+    "rows": 1,
+    "columns": 1,
+    "preview": [
+      [
+        "raca"
+      ]
+    ]
+  },
+  {
+    "sheet_index": 4,
+    "sheet_name": "4_raca_isop",
+    "rows": 1,
+    "columns": 1,
+    "preview": [
+      [
+        "racao"
+      ]
+    ]
+  },
+  {
+    "sheet_index": 5,
+    "sheet_name": "5_cult_tilapia",
+    "rows": 1,
+    "columns": 1,
+    "preview": [
+      [
+        "cultura"
+      ]
+    ]
+  },
+  {
+    "sheet_index": 6,
+    "sheet_name": "6_crabs",
+    "rows": 1,
+    "columns": 1,
+    "preview": [
+      [
+        "especie"
+      ]
+    ]
+  },
+  {
+    "sheet_index": 7,
+    "sheet_name": "7_dens_tilap",
+    "rows": 1,
+    "columns": 1,
+    "preview": [
+      [
+        "densidade"
+      ]
+    ]
+  },
+  {
+    "sheet_index": 8,
+    "sheet_name": "10_caranguejos",
+    "rows": 1,
+    "columns": 1,
+    "preview": [
+      [
+        "local"
+      ]
+    ]
+  },
+  {
+    "sheet_index": 9,
+    "sheet_name": "11_leite_tuber",
+    "rows": 1,
+    "columns": 1,
+    "preview": [
+      [
+        "rep"
+      ]
+    ]
+  },
+  {
+    "sheet_index": 10,
+    "sheet_name": "12_caixa_lagosta",
+    "rows": 1,
+    "columns": 1,
+    "preview": [
+      [
+        "estrato"
+      ]
+    ]
+  },
+  {
+    "sheet_index": 11,
+    "sheet_name": "13_amost_dic",
+    "rows": 1,
+    "columns": 1,
+    "preview": [
+      [
+        "tanque"
+      ]
+    ]
+  },
+  {
+    "sheet_index": 12,
+    "sheet_name": "14_cangulo_regs",
+    "rows": 1,
+    "columns": 1,
+    "preview": [
+      [
+        "comprimento"
+      ]
+    ]
+  },
+  {
+    "sheet_index": 13,
+    "sheet_name": "15_demo_tlc",
+    "rows": 1,
+    "columns": 1,
+    "preview": [
+      [
+        "y"
+      ]
+    ]
+  },
+  {
+    "sheet_index": 14,
+    "sheet_name": "16_pulgoes",
+    "rows": 1,
+    "columns": 1,
+    "preview": [
+      [
+        "tratamento"
+      ]
+    ]
+  },
+  {
+    "sheet_index": 15,
+    "sheet_name": "17_qui2_camar",
+    "rows": 1,
+    "columns": 1,
+    "preview": [
+      [
+        "sexo"
+      ]
+    ]
+  },
+  {
+    "sheet_index": 16,
+    "sheet_name": "19_cvf",
+    "rows": 1,
+    "columns": 1,
+    "preview": [
+      [
+        "paciente"
+      ]
+    ]
+  },
+  {
+    "sheet_index": 17,
+    "sheet_name": "20_ira",
+    "rows": 1,
+    "columns": 1,
+    "preview": [
+      [
+        "ira"
+      ]
+    ]
+  },
+  {
+    "sheet_index": 18,
+    "sheet_name": "21_banana_larva_chi2",
+    "rows": 1,
+    "columns": 1,
+    "preview": [
+      [
+        "larva"
+      ]
+    ]
+  },
+  {
+    "sheet_index": 19,
+    "sheet_name": "22_moscas",
+    "rows": 1,
+    "columns": 1,
+    "preview": [
+      [
+        "tipo"
+      ]
+    ]
+  },
+  {
+    "sheet_index": 20,
+    "sheet_name": "23_pardais",
+    "rows": 1,
+    "columns": 1,
+    "preview": [
+      [
+        "idade"
+      ]
+    ]
+  },
+  {
+    "sheet_index": 21,
+    "sheet_name": "24_Bagres",
+    "rows": 1,
+    "columns": 1,
+    "preview": [
+      [
+        "racao"
+      ]
+    ]
+  }
+]

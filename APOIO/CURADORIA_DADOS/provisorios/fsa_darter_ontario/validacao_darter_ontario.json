@@ -1,0 +1,41 @@
+{
+  "linhas_originais": 54,
+  "colunas_originais": 3,
+  "linhas_limpo": 54,
+  "colunas_limpo": 4,
+  "rios": {
+    "Trent": 33,
+    "Salmon": 21
+  },
+  "idades": {
+    "1": 2,
+    "2": 16,
+    "3": 24,
+    "4": 11,
+    "5": 1
+  },
+  "ausentes_por_coluna": {
+    "id_peixe": 0,
+    "idade_anos": 0,
+    "comprimento_total_mm": 0,
+    "rio": 0
+  },
+  "duplicatas_id_peixe": 0,
+  "duplicatas_completas": 0,
+  "mann_whitney": {
+    "n_salmon": 21,
+    "n_trent": 33,
+    "mediana_idade_salmon": 2.0,
+    "mediana_idade_trent": 3.0,
+    "u_salmon": 233.0,
+    "u_trent": 460.0,
+    "u_menor": 233.0,
+    "idades_com_empate": {
+      "3": 24,
+      "2": 16,
+      "4": 11,
+      "1": 2
+    },
+    "ha_empates": true
+  }
+}

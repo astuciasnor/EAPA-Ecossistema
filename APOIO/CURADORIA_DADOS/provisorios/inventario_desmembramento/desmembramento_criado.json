@@ -1,0 +1,107 @@
+[
+  {
+    "sheet": "1_bezerro_1am",
+    "data": "bezerros_amostra_unica.xlsx",
+    "handout": "atividade_t_uma_amostra_bezerros.md",
+    "rows": 11,
+    "columns": 1
+  },
+  {
+    "sheet": "2_bezero_2am",
+    "data": "bezerros_racas.xlsx",
+    "handout": "atividade_t_independente_bezerros_racas.md",
+    "rows": 21,
+    "columns": 2
+  },
+  {
+    "sheet": "4_raca_isop",
+    "data": "racao_quatro_niveis.xlsx",
+    "handout": "atividade_anova_racao_quatro_niveis.md",
+    "rows": 17,
+    "columns": 2
+  },
+  {
+    "sheet": "5_cult_tilapia",
+    "data": "cultivo_tilapia_produtividade.xlsx",
+    "handout": "atividade_anova_cultivo_tilapia.md",
+    "rows": 17,
+    "columns": 2
+  },
+  {
+    "sheet": "7_dens_tilap",
+    "data": "densidade_tilapia_taxa.xlsx",
+    "handout": "atividade_anova_densidade_tilapia.md",
+    "rows": 22,
+    "columns": 2
+  },
+  {
+    "sheet": "11_leite_tuber",
+    "data": "leite_tuberculo_dbc.xlsx",
+    "handout": "atividade_dbc_leite_tuberculo.md",
+    "rows": 25,
+    "columns": 3
+  },
+  {
+    "sheet": "12_caixa_lagosta",
+    "data": "amostragem_estratificada_lagosta.xlsx",
+    "handout": "atividade_amostragem_estratificada_lagosta.md",
+    "rows": 9,
+    "columns": 4
+  },
+  {
+    "sheet": "13_amost_dic",
+    "data": "delineamento_dic_tanques.xlsx",
+    "handout": "atividade_delineamento_dic_tanques.md",
+    "rows": 21,
+    "columns": 2
+  },
+  {
+    "sheet": "15_demo_tlc",
+    "data": "demonstracao_tlc.xlsx",
+    "handout": "atividade_tlc_demonstracao.md",
+    "rows": 60,
+    "columns": 1
+  },
+  {
+    "sheet": "16_pulgoes",
+    "data": "pulgoes_tratamentos.xlsx",
+    "handout": "atividade_anova_pulgoes.md",
+    "rows": 31,
+    "columns": 2
+  },
+  {
+    "sheet": "19_cvf",
+    "data": "cvf_pareado.xlsx",
+    "handout": "atividade_t_pareado_cvf.md",
+    "rows": 11,
+    "columns": 3
+  },
+  {
+    "sheet": "20_ira",
+    "data": "ira_creatinina.xlsx",
+    "handout": "atividade_t_independente_ira.md",
+    "rows": 12,
+    "columns": 2
+  },
+  {
+    "sheet": "21_banana_larva_chi2",
+    "data": "banana_larvas_qui2.xlsx",
+    "handout": "atividade_qui2_banana_larvas.md",
+    "rows": 3,
+    "columns": 4
+  },
+  {
+    "sheet": "22_moscas",
+    "data": "moscas_vegetacao_densidade.xlsx",
+    "handout": "atividade_anova_moscas.md",
+    "rows": 16,
+    "columns": 2
+  },
+  {
+    "sheet": "23_pardais",
+    "data": "pardais_asa_idade.xlsx",
+    "handout": "atividade_regressao_pardais.md",
+    "rows": 14,
+    "columns": 2
+  }
+]

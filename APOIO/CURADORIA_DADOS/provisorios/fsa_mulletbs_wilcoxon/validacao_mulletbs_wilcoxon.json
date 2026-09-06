@@ -1,0 +1,19 @@
+{
+  "conjunto": "atividade_wilcoxon_otolitos",
+  "linhas": 51,
+  "pares_completos": 51,
+  "ausentes": {
+    "whole_otolith_age": 0,
+    "broken_burnt_age": 0
+  },
+  "fish_id_duplicados": 0,
+  "idades_fora_da_faixa_esperada": 0,
+  "resumo_reservado_para_validacao": {
+    "mediana_otolito_inteiro": 3,
+    "mediana_otolito_quebrado_queimado": 4,
+    "mediana_diferencas": 1,
+    "diferencas_positivas": 36,
+    "diferencas_negativas": 0,
+    "diferencas_zero": 15
+  }
+}

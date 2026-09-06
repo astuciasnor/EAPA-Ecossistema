@@ -1,0 +1,62 @@
+{
+  "conjunto": "idades_savel_repetibilidade",
+  "linhas": 53,
+  "colunas": 8,
+  "ausentes_por_variavel": {
+    "fish_id": 0,
+    "true_age": 0,
+    "reader_a_1": 2,
+    "reader_a_2": 2,
+    "reader_b_1": 20,
+    "reader_b_2": 20,
+    "reader_c_1": 1,
+    "reader_c_2": 1
+  },
+  "fish_id_duplicados": 0,
+  "idades_fora_da_faixa_esperada": 0,
+  "comparacoes_pareadas": {
+    "leitor_a": {
+      "pares_completos": 51,
+      "diferencas_zero": 26,
+      "concordancia_exata_pct": 50.98039215686274,
+      "diferenca_minima": -3,
+      "diferenca_mediana": 0,
+      "diferenca_maxima": 2,
+      "wilcoxon_aproximado": {
+        "v_soma_postos_positivos": 119,
+        "z": -1.2134359631030642,
+        "p_bicaudal": 0.22496331610227838,
+        "empates_em_diferencas_absolutas": true
+      }
+    },
+    "leitor_b": {
+      "pares_completos": 33,
+      "diferencas_zero": 22,
+      "concordancia_exata_pct": 66.66666666666667,
+      "diferenca_minima": -1,
+      "diferenca_mediana": 0,
+      "diferenca_maxima": 1,
+      "wilcoxon_aproximado": {
+        "v_soma_postos_positivos": 24,
+        "z": -0.8542821429703302,
+        "p_bicaudal": 0.3929485885683395,
+        "empates_em_diferencas_absolutas": true
+      }
+    },
+    "leitor_c": {
+      "pares_completos": 52,
+      "diferencas_zero": 27,
+      "concordancia_exata_pct": 51.92307692307692,
+      "diferenca_minima": -3,
+      "diferenca_mediana": 0,
+      "diferenca_maxima": 1,
+      "wilcoxon_aproximado": {
+        "v_soma_postos_positivos": 50,
+        "z": -3.185406561902376,
+        "p_bicaudal": 0.0014456375019222811,
+        "empates_em_diferencas_absolutas": true
+      }
+    }
+  },
+  "decisao_curadoria": "Os 53 peixes e as ausencias originais foram preservados. Cada comparacao deve usar somente pares completos do leitor e dos dois momentos envolvidos."
+}

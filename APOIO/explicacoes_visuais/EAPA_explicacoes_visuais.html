@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EAPA — Explicações Visuais</title>
+<style>
+  :root{
+    --navy:#0F3B5F; --teal:#2E7D8F; --seafoam:#62B6B7; --amber:#E89B3C; --coral:#E76F51;
+    --ink:#1a2630; --muted:#5b6b76; --line:#e3e8ea; --bg:#f7f9fa; --card:#ffffff;
+    --sidebar-w:248px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.55}
+
+  /* ---------- SIDEBAR ---------- */
+  .sidebar{position:fixed;top:0;left:0;width:var(--sidebar-w);height:100vh;
+    background:var(--navy);color:#fff;display:flex;flex-direction:column;overflow-y:auto}
+  .sidebar .brand{padding:22px 20px 14px;border-bottom:1px solid rgba(255,255,255,.12)}
+  .sidebar .brand h1{margin:0;font-size:16px;font-family:Cambria,Georgia,serif;line-height:1.3}
+  .sidebar .brand p{margin:6px 0 0;font-size:11.5px;opacity:.7}
+  .sidebar nav{padding:10px 0}
+  .sidebar nav .lbl{font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;
+    opacity:.55;padding:8px 20px 4px}
+  .sidebar nav a{display:flex;gap:10px;align-items:baseline;padding:9px 20px;
+    color:#dce6ec;text-decoration:none;font-size:13px;border-left:3px solid transparent}
+  .sidebar nav a .num{font-size:11px;opacity:.6;min-width:14px}
+  .sidebar nav a:hover{background:rgba(255,255,255,.06);color:#fff}
+  .sidebar nav a.active{background:rgba(98,182,183,.16);border-left-color:var(--amber);color:#fff;font-weight:600}
+  .sidebar .foot{margin-top:auto;padding:14px 20px;font-size:10.5px;opacity:.55;
+    border-top:1px solid rgba(255,255,255,.12)}
+
+  /* ---------- MAIN ---------- */
+  main{margin-left:var(--sidebar-w);padding:30px 26px 80px;max-width:980px}
+  section.card{background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:24px 26px;margin:0 0 26px;box-shadow:0 1px 2px rgba(15,59,95,.04);scroll-margin-top:18px}
+  section.card > h2{margin:0 0 4px;font-size:19px;color:var(--navy);font-family:Cambria,Georgia,serif}
+  .date{font-size:12px;color:var(--muted);margin-bottom:16px}
+  .fig{width:100%;border:1px solid var(--line);border-radius:10px;background:#fff;display:block}
+  .note{font-size:13.5px;color:var(--muted);margin-top:14px}
+  .legenda{font-size:13.5px;color:var(--ink);margin-top:12px}
+  code{background:#eef3f5;padding:1px 5px;border-radius:4px;font-size:.92em}
+
+  /* ---------- RESPONSIVO ---------- */
+  @media (max-width:720px){
+    .sidebar{position:static;width:100%;height:auto}
+    .sidebar nav{display:flex;flex-wrap:wrap;padding:6px 8px}
+    .sidebar nav .lbl{width:100%}
+    .sidebar nav a{border-left:none;border-radius:8px;padding:7px 12px}
+    .sidebar nav a.active{border-left:none;background:rgba(98,182,183,.22)}
+    .sidebar .foot{display:none}
+    main{margin-left:0;padding:18px 14px 60px}
+  }
+</style>
+</head>
+<body>
+
+<aside class="sidebar">
+  <div class="brand">
+    <h1>EAPA — Explicações Visuais</h1>
+    <p>Manual visual vivo do ecossistema</p>
+  </div>
+  <nav id="nav"><span class="lbl">Explicações</span></nav>
+  <div class="foot">Documento de apoio · atualizado conforme novas explicações</div>
+</aside>
+
+<main id="conteudo">
+
+  <!-- ====================================================================
+       COMO ADICIONAR UMA EXPLICAÇÃO NOVA:
+       copie um bloco <section class="card" id="..."> abaixo, troque o id e
+       o <h2>. A sidebar se monta sozinha a partir do id + <h2> de cada
+       <section class="card">. Não precisa editar o menu à mão.
+  ===================================================================== -->
+
+  <section class="card" id="mapa-ecossistema">
+    <h2>O ecossistema EAPA — a analogia da cozinha</h2>
+    <div class="date">Adicionado em 12/06/2026</div>
+
+    <svg class="fig" viewBox="0 0 720 600" xmlns="http://www.w3.org/2000/svg" role="img"
+         font-family="-apple-system, Segoe UI, Roboto, sans-serif">
+      <title>Mapa do ecossistema EAPA com a analogia da cozinha</title>
+      <desc>O EAPADados é a cozinha que guarda dados e funções (a receita). A CatalyseR (IDE) e o Livro EAPA são dois restaurantes que usam a mesma receita. A IDE produz o relatório .docx pelo pipeline qmd + modelo de referência.</desc>
+
+      <g font-size="12" fill="#5b6b76">
+        <rect x="24" y="20" width="12" height="12" rx="3" fill="#0F3B5F"/>
+        <text x="42" y="30">Fonte (a cozinha)</text>
+        <rect x="190" y="20" width="12" height="12" rx="3" fill="#2E7D8F"/>
+        <text x="208" y="30">Consumidores (restaurantes)</text>
+        <rect x="430" y="20" width="12" height="12" rx="3" fill="#E89B3C"/>
+        <text x="448" y="30">Entrega final</text>
+      </g>
+
+      <rect x="225" y="58" width="270" height="110" rx="12" fill="#E7EEF3" stroke="#0F3B5F" stroke-width="2"/>
+      <text x="360" y="86" text-anchor="middle" font-size="17" font-weight="700" fill="#0F3B5F">EAPADados</text>
+      <text x="360" y="105" text-anchor="middle" font-size="12.5" fill="#0F3B5F">A cozinha — guarda a receita</text>
+      <rect x="245" y="118" width="100" height="34" rx="8" fill="#fff" stroke="#0F3B5F" stroke-width="1"/>
+      <text x="295" y="139" text-anchor="middle" font-size="11.5" fill="#0F3B5F">Dados (.rda)</text>
+      <rect x="355" y="118" width="120" height="34" rx="8" fill="#fff" stroke="#0F3B5F" stroke-width="1"/>
+      <text x="415" y="133" text-anchor="middle" font-size="11" fill="#0F3B5F">Funções</text>
+      <text x="415" y="146" text-anchor="middle" font-size="9.5" fill="#0F3B5F">calcular/mostrar/relatar</text>
+
+      <path d="M300 168 L170 232" stroke="#9aa6ad" stroke-width="2" fill="none" marker-end="url(#arw)"/>
+      <path d="M420 168 L552 232" stroke="#9aa6ad" stroke-width="2" fill="none" marker-end="url(#arw)"/>
+
+      <rect x="40" y="236" width="250" height="92" rx="12" fill="#E6F0F1" stroke="#2E7D8F" stroke-width="2"/>
+      <text x="165" y="264" text-anchor="middle" font-size="16" font-weight="700" fill="#1f5b68">CatalyseR (IDE)</text>
+      <text x="165" y="284" text-anchor="middle" font-size="12" fill="#1f5b68">Restaurante 1 — a bancada</text>
+      <text x="165" y="305" text-anchor="middle" font-size="11" fill="#1f5b68">menu de análises → gera .docx e .zip</text>
+
+      <rect x="430" y="236" width="250" height="92" rx="12" fill="#E6F0F1" stroke="#2E7D8F" stroke-width="2"/>
+      <text x="555" y="264" text-anchor="middle" font-size="16" font-weight="700" fill="#1f5b68">Livro EAPA</text>
+      <text x="555" y="284" text-anchor="middle" font-size="12" fill="#1f5b68">Restaurante 2 — o cardápio</text>
+      <text x="555" y="305" text-anchor="middle" font-size="11" fill="#1f5b68">capítulos espelham a IDE</text>
+
+      <line x1="40" y1="364" x2="680" y2="364" stroke="#e3e8ea" stroke-width="1"/>
+      <text x="40" y="392" font-size="13" font-weight="700" fill="#1a2630">Como nasce o relatório (o prato sendo montado)</text>
+
+      <rect x="40" y="410" width="150" height="78" rx="10" fill="#fff" stroke="#2E7D8F" stroke-width="1.5"/>
+      <text x="115" y="435" text-anchor="middle" font-size="12" font-weight="700" fill="#1f5b68">Ingredientes</text>
+      <text x="115" y="453" text-anchor="middle" font-size="10" fill="#1f5b68">.qmd + reference.docx</text>
+      <text x="115" y="468" text-anchor="middle" font-size="10" fill="#1f5b68">+ dados + funções</text>
+
+      <path d="M192 449 L236 449" stroke="#9aa6ad" stroke-width="2" fill="none" marker-end="url(#arw)"/>
+
+      <rect x="238" y="410" width="150" height="78" rx="10" fill="#fff" stroke="#2E7D8F" stroke-width="1.5"/>
+      <text x="313" y="441" text-anchor="middle" font-size="12" font-weight="700" fill="#1f5b68">quarto render</text>
+      <text x="313" y="461" text-anchor="middle" font-size="10" fill="#1f5b68">--to docx (o forno)</text>
+
+      <path d="M390 449 L434 449" stroke="#9aa6ad" stroke-width="2" fill="none" marker-end="url(#arw)"/>
+
+      <rect x="436" y="410" width="180" height="78" rx="10" fill="#FBF0E1" stroke="#E89B3C" stroke-width="2"/>
+      <text x="526" y="441" text-anchor="middle" font-size="13" font-weight="700" fill="#a4641a">Relatório .docx</text>
+      <text x="526" y="461" text-anchor="middle" font-size="10" fill="#a4641a">tabela Ocean + narrativa</text>
+      <text x="526" y="475" text-anchor="middle" font-size="10" fill="#a4641a">automática em português</text>
+
+      <text x="40" y="528" font-size="11.5" fill="#5b6b76">Regra de ouro: a receita (funções) mora na cozinha (EAPADados). IDE e livro só a chamam — nunca copiam.</text>
+      <text x="40" y="548" font-size="11.5" fill="#5b6b76">Assim a mesma análise produz o mesmo resultado nos dois lugares.</text>
+
+      <defs>
+        <marker id="arw" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+          <path d="M0,0 L7,3 L0,6 Z" fill="#9aa6ad"/>
+        </marker>
+      </defs>
+    </svg>
+
+    <p class="legenda"><strong>Como ler:</strong> o <strong>EAPADados</strong> é a cozinha — guarda os ingredientes (dados <code>.rda</code>) e as receitas (as funções <code>calcular/mostrar/relatar</code>). A <strong>CatalyseR</strong> e o <strong>Livro</strong> são dois restaurantes que usam a mesma receita. O <strong>relatório .docx</strong> sai de um pipeline: o <code>.qmd</code> junta dados + funções, o <code>custom-reference.docx</code> é a louça da casa (fonte, margens ABNT, sumário) e o <code>quarto render</code> é o forno.</p>
+    <p class="note">Regra de ouro: a receita mora só na cozinha. Os dois restaurantes a chamam, nunca copiam — por isso o mesmo número sai igual nos dois lugares.</p>
+  </section>
+
+</main>
+
+<script>
+  // Monta a navegação a partir de cada <section class="card"> (id + <h2>).
+  (function(){
+    const secs=[...document.querySelectorAll('main section.card')];
+    const nav=document.getElementById('nav');
+    secs.forEach((s,i)=>{
+      const h=s.querySelector('h2');
+      const a=document.createElement('a');
+      a.href='#'+s.id;
+      a.innerHTML='<span class="num">'+(i+1)+'</span><span>'+(h?h.textContent:s.id)+'</span>';
+      a.dataset.target=s.id;
+      nav.appendChild(a);
+    });
+    const links=[...nav.querySelectorAll('a')];
+    // Destaque do item ativo conforme rolagem.
+    const obs=new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          links.forEach(l=>l.classList.toggle('active', l.dataset.target===e.target.id));
+        }
+      });
+    },{rootMargin:'-40% 0px -55% 0px',threshold:0});
+    secs.forEach(s=>obs.observe(s));
+    if(links[0]) links[0].classList.add('active');
+  })();
+</script>
+</body>
+</html>

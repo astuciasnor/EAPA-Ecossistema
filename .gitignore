@@ -1,0 +1,33 @@
+# Somente a organização do ecossistema entra no Git da raiz.
+/*
+!/.gitignore
+!/README.md
+!/CLAUDE.md
+!/AGENTS.md
+!/EAPA-Ecossistema.Rproj
+!/APOIO/
+
+# Arquivos locais do R e do RStudio.
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+
+# Arquivo histórico, temporários e artefatos locais de homologação.
+/APOIO/_legado/
+/APOIO/tmp/
+/APOIO/saida-sandbox/
+/APOIO/transferencia-vm/
+/APOIO/Rplots.pdf
+
+# Dependências, caches e configurações locais das ferramentas.
+node_modules/
+__pycache__/
+.venv/
+.agents/
+.git/
+*.inspect.ndjson
+
+# Arquivos de bloqueio de documentos abertos.
+.~lock.*#
+~$*

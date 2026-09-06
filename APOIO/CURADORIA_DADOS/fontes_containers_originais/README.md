@@ -6,4 +6,4 @@ Esta pasta centraliza os arquivos-fonte históricos usados na curadoria do EAPAD
 - `aulas_bioestatistica_ORIGINAL.xlsx`: planilha original de aulas, preservada sem alterações.
 - `dados_brutos_eapadados.xlsx`: fonte consolidada ainda lida pelos scripts em `data-raw/`.
 
-Os scripts que usam a fonte consolidada devem referenciá-la a partir da raiz do pacote como `CURADORIA_DADOS/fontes_containers_originais/dados_brutos_eapadados.xlsx`.
+Esta pasta mora em `APOIO/`, fora do pacote. Os scripts de `data-raw/` rodam a partir da raiz do pacote EAPADados e referenciam a fonte consolidada como `../APOIO/CURADORIA_DADOS/fontes_containers_originais/dados_brutos_eapadados.xlsx` (o pacote e a pasta `APOIO/` são irmãos dentro de `EAPA-Ecossistema`).

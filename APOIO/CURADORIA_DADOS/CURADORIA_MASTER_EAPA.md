@@ -30,13 +30,17 @@ Todo dataset entra na curadoria com quatro perguntas respondidas:
 ## Localizacao canonica dos arquivos de curadoria
 
 Os arquivos brutos, provisórios, versões limpas intermediárias e artefatos de
-validação ficam em `CURADORIA_DADOS/provisorios/`. O workbook curado principal,
+validação ficam em `ATIVIDADES/provisorios/`, para que a curadoria e as
+atividades permaneçam no mesmo pilar de trabalho. O workbook curado principal,
 o registro de fontes e os containers originais permanecem na raiz desta pasta e
 em `fontes_containers_originais/`.
 
 `curadoria_arquivos/` foi a área legada de transição e foi descontinuada. Ela não
 é fonte da verdade nem deve ser recriada; novos arquivos entram em
-`CURADORIA_DADOS/provisorios/` ou, quando aprovados, no pacote `EAPADados`.
+`ATIVIDADES/provisorios/` ou, quando aprovados, no pacote `EAPADados`.
+
+Registros históricos que mencionam apenas `provisorios/` referem-se à pasta
+`ATIVIDADES/provisorios/` a partir da raiz do ecossistema.
 
 ## Status juridico padrao
 
@@ -157,7 +161,7 @@ papéis complementares e não devem ser confundidos:
   A atividade deve pedir leitura de médias/DP, barras de erro e comparação com
   a ANOVA reportada pelos autores.
 
-Os dois CSV também estão em `atividades/dados/`, acompanhados dos handouts das
+Os dois CSV também estão em `ATIVIDADES/dados/`, acompanhados dos handouts das
 atividades. A cópia em `EAPADados/data-raw/curados/` é a entrada de construção
 dos objetos `.rda`; os arquivos não são gerados sinteticamente.
 

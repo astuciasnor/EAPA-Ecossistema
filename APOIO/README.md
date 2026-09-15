@@ -6,7 +6,6 @@ para este diretório, preservando os conteúdos e os nomes originais.
 | Pasta | Conteúdo |
 |---|---|
 | `documentacao/` | Planejamento, decisões e guias |
-| `atividades/` | Atividades e rubricas de avaliação |
 | `CURADORIA_DADOS/` | Curadoria de dados |
 | `Artigos_Obter_Dados/` | Artigos e fontes para obtenção de dados |
 | `materiais/` | Materiais de apoio |
@@ -16,12 +15,13 @@ para este diretório, preservando os conteúdos e os nomes originais.
 | `transferencia-vm/` | Artefatos de entrada do Sandbox; somente locais |
 | `saida-sandbox/` | Resultados de homologação; somente locais |
 | `_legado/` | Histórico preservado; somente local |
+| `temp/` | Produtos transitórios de desenvolvimento e testes; somente local |
 | `tmp/` | Temporários preservados; somente locais |
 
 `mapas.md` contém a especificação de mapas. O lançador `sandbox-catalyser.wsb`
 aponta para as pastas de transferência e saída deste diretório.
 `Rplots.pdf` foi preservado aqui e permanece fora do Git.
 
-Os quatro projetos ficam um nível acima. Ao usar um caminho relativo em um
+Os quatro projetos e `ATIVIDADES/` ficam um nível acima. Ao usar um caminho relativo em um
 arquivo movido, considere a nova localização. Os arquivos históricos e os
 pacotes de transferência preservam os caminhos registrados na época.

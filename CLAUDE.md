@@ -13,7 +13,8 @@ EAPA-Ecossistema/              (pasta-mãe — D:\Claude\EAPA-Ecossistema)
 ├── eapa/                      # Livro Quarto (repo: astuciasnor/eapa + GitHub Pages)
 ├── EAPADados/                 # pacote R — DADOS de contexto
 ├── EAPACaderno/    # 4º subprojeto (set/2026) — projeto-modelo de análise em R, "a pé"
-└── APOIO/                    # atividades, documentação, dados e ferramentas de apoio
+├── ATIVIDADES/                 # avaliação por aprendizagem ativa, dados externos e rubricas
+└── APOIO/                      # documentação, curadoria de dados e ferramentas de apoio
 ```
 
 > Não se guarda amostra do Projeto R exportado pela CatalyseR na raiz: quando for
@@ -158,15 +159,15 @@ tabelas do Word com `flextable_ocean()`, números com `fmt()`/`formatar_p()`. Sa
 oficial: **Word** (`relatorio.qmd` → `relatorio.docx`, com o mesmo
 `custom-reference.docx` da CatalyseR).
 
-## Avaliação por aprendizagem ativa (`APOIO/atividades/`)
+## Avaliação por aprendizagem ativa (`ATIVIDADES/`)
 
 Além dos subprojetos, o ecossistema tem um pilar pedagógico de **avaliação**: a
-**avaliação dos alunos por aprendizagem ativa**, na pasta `APOIO/atividades/`. Aqui o aluno
+**avaliação dos alunos por aprendizagem ativa**, na pasta `ATIVIDADES/`. Aqui o aluno
 percorre o ciclo completo sozinho — **importar → arrumar → analisar → relatório** — com
 **dados reais do banco externo, distintos** dos exemplos do pacote e do livro, avaliado
 por **rubrica**. Encaixe: CatalyseR = ferramenta; EAPADados/banco externo = dados; livro =
-referência; `APOIO/atividades/` = avaliação (o "do dado ao relatório"). Crescer = copiar
-`APOIO/atividades/_MOLDE_atividade.md` e registrar no índice de `APOIO/atividades/README.md` (o charter
+referência; `ATIVIDADES/` = avaliação (o "do dado ao relatório"). Crescer = copiar
+`ATIVIDADES/_MOLDE_atividade.md` e registrar no índice de `ATIVIDADES/README.md` (o charter
 do pilar). Regra: dado de atividade é real e **diferente** dos exemplos do pacote/livro.
 
 ## Concepção, diferenciais e reflexões (o "porquê" do projeto)

@@ -9,6 +9,7 @@ A pasta-mãe está em `D:\Claude\EAPA-Ecossistema`.
 - `EAPA/` — livro Quarto.
 - `EAPADados/` — pacote R de dados de contexto.
 - `EAPACaderno/` — projeto-modelo de análise em R.
+- `ATIVIDADES/` — avaliação por aprendizagem ativa, com dados externos e rubricas.
 
 Cada projeto mantém seu próprio repositório Git. O Git da raiz será dedicado
 à organização do ecossistema e ao material de apoio liberado no `.gitignore`.
@@ -17,6 +18,8 @@ Cada projeto mantém seu próprio repositório Git. O Git da raiz será dedicado
 
 As pastas auxiliares estão em [APOIO](APOIO/README.md), com seus nomes originais.
 As instruções `AGENTS.md` e `CLAUDE.md` permanecem na raiz.
+
+As atividades ficam em [ATIVIDADES](ATIVIDADES/README.md), para acesso direto.
 
 - Guia de mapas: [APOIO/mapas.md](APOIO/mapas.md).
 - Windows Sandbox: `APOIO/sandbox-catalyser.wsb`.

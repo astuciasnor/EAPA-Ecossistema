@@ -6,6 +6,7 @@
 !/AGENTS.md
 !/EAPA-Ecossistema.Rproj
 !/APOIO/
+!/ATIVIDADES/
 
 # Arquivos locais do R e do RStudio.
 .Rproj.user/
@@ -15,6 +16,7 @@
 
 # Arquivo histórico, temporários e artefatos locais de homologação.
 /APOIO/_legado/
+/APOIO/temp/
 /APOIO/tmp/
 /APOIO/saida-sandbox/
 /APOIO/transferencia-vm/

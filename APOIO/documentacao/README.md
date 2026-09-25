@@ -1,7 +1,7 @@
 # Documentação do ecossistema
 
 Documentos de planejamento, decisões, inventários e roteiros que orientam os
-quatro subprojetos (`catalyser/`, `eapa/`, `EAPADados/` e `EAPACaderno/`).
+quatro subprojetos (`catalyser/`, `eapa/`, `EAPADados/` e `EAPACadernos/`).
 
 - [Código que Fala](codigo-que-fala-guia-estilo.md) — guia de legibilidade do R
   fornecido pelo autor em 14/09/2026, após concluir a ANOVA; referência para

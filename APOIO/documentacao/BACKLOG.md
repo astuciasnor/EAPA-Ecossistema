@@ -4,6 +4,11 @@ Ideias e decisões adiadas, fora do escopo enxuto da v1 (1ª edição até set/2
 Cada item registra o contexto, as opções consideradas e a inclinação atual, para
 não se perder até a retomada.
 
+Plano específico registrado em 21/09/2026:
+[Prioridades e expansões da CatalyseR](../../catalyser/docs/PLANO_PRIORIDADES_E_EXPANSOES.md).
+Separa o primeiro lote proposto de Frequências e Proporções das expansões adiadas,
+incluindo amostragem e comparação de modelos. Não autoriza implementação.
+
 ---
 
 ## B-001 · Empacotar a IDE CatalyseR para os alunos instalarem e lançarem

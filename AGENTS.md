@@ -5,6 +5,22 @@ separadamente e estão sendo **entrosados**. A espinha do ecossistema é a IDE
 **CatalyseR**. Use este arquivo como contexto permanente ao trabalhar em qualquer
 um deles.
 
+## Skill dos projetos de análise — convenção atual (19/09/2026)
+
+Para criar, adaptar ou revisar projetos de análise do EAPACadernos, leia
+[eapa-projetos-analise](skills/eapa-projetos-analise/SKILL.md).
+A referência didática é `EAPACadernos/linear-morfometria-barbo/`: um
+`R/analise.R` como fonte dos cálculos, `R/funcoes.R` para apresentação e dois
+QMDs que executam o mesmo script, um para HTML e outro para Word. Os QMDs usam
+objetos em memória; os CSVs e PNGs exportados são cópias para compartilhar.
+O HTML pode consultar o modelo com `summary(modelo_lm)`, conforme aprovado.
+
+Esta organização substitui, para os novos projetos desta família, as descrições
+históricas abaixo de um único QMD, sincronização de chunks e ausência de
+`saida/`. A skill adapta a extensão e as saídas a cada método, preserva o
+caráter didático e orienta a validação e a revisão do autor. Ela fica fora das
+pastas dos alunos. Sua criação não migra o exportador nem a pasta ANOVA.
+
 ## Estrutura de pastas
 
 ```
@@ -12,7 +28,7 @@ EAPA-Ecossistema/              (pasta-mãe — D:\Claude\EAPA-Ecossistema)
 ├── catalyser/                 # IDE Shiny CatalyseR — FONTE DA VERDADE das análises
 ├── eapa/                      # Livro Quarto (repo: astuciasnor/eapa + GitHub Pages)
 ├── EAPADados/                 # pacote R — DADOS de contexto
-├── EAPACaderno/    # 4º subprojeto (set/2026) — projeto-modelo de análise em R, "a pé"
+├── EAPACadernos/   # 4º subprojeto (set/2026) — coleção de projetos R "a pé"
 ├── ATIVIDADES/                 # avaliação por aprendizagem ativa, dados externos e rubricas
 └── APOIO/                      # documentação, curadoria de dados e ferramentas de apoio
 ```
@@ -20,7 +36,7 @@ EAPA-Ecossistema/              (pasta-mãe — D:\Claude\EAPA-Ecossistema)
 > Não se guarda amostra do Projeto R exportado pela CatalyseR na raiz: quando for
 > preciso inspecionar um, `APOIO/scripts/gerar-projeto-exemplo.R` gera `projeto-exemplo/`
 > na hora (e a pasta pode ser apagada depois). Não confundir com
-> `EAPACaderno/`, que é o caminho manual, sem IDE.
+> `EAPACadernos/`, que é o caminho manual, sem IDE.
 
 ## Repositórios
 
@@ -38,7 +54,7 @@ pesqueira e geral, aquicultura, tecnologia do pescado), consumido pela IDE, pelo
 projetos exportados e pelo livro. A CatalyseR também **gera um Projeto R (.zip com
 .qmd)** para o aluno completar no RStudio — a ponte do "mouse ao código".
 
-## Quarto subprojeto — Projeto-modelo de análise (`EAPACaderno/`)
+## Quarto subprojeto — Projetos-modelo de análise (`EAPACadernos/`)
 
 Desde setembro de 2026 há um quarto subprojeto, de natureza diferente dos outros
 três: um **projeto-modelo de análise de dados em R**, feito de propósito **como se a
@@ -463,10 +479,41 @@ correlação/heatmap, Box-Cox, joins/datas.
 
 ## Diretrizes para o agente
 
+- Aprovação didática registrada em 18/09/2026: o autor considerou a organização
+  do projeto `EAPACadernos/linear-morfometria-barbo` clara para sua leitura e adequada
+  para um professor com conhecimentos intermediários de R explicar aos alunos.
+  Essa avaliação do autor é a referência para os próximos projetos; não equivale
+  a uma avaliação já realizada com alunos nem à conclusão da migração do exportador.
+  Preservar o propósito: o projeto exportado deve permitir compreender o que
+  a CatalyseR faz por baixo dos panos e manter o interesse em aprender programação.
+  Clareza dos arquivos, cálculos e relações entre eles é um requisito didático,
+  junto com correção estatística e reprodutibilidade.
 - A CatalyseR manda nas análises; o livro segue; o EAPADados fornece dados.
 - Respeite o escopo de v1: só o que já está dominado e na IDE.
-- No `EAPACaderno/`, simplicidade manda: sem infraestrutura, sem
+- Nos projetos de `EAPACadernos/`, simplicidade manda: sem infraestrutura, sem
   abstrações, sem dependência da CatalyseR, sem arquivos de agente lá dentro.
 - Comente em português; mantenha os exemplos contextualizados à pesca e aquicultura.
+- Referência didática aprovada pelo autor: `EAPACadernos/linear-morfometria-barbo/R/analise.R`.
+  A regressão é referência de clareza, não uma extensão mínima de código a copiar.
+  Análises curtas podem ser degraus de aprendizagem: conservar a organização
+  reconhecível dos Projetos R e percorrer dados → análise → comunicação com
+  menos operações. Primeiro exemplo preparado: `EAPACadernos/descritiva-barbo`,
+  com uma variável, uma tabela e um histograma; aguarda revisão didática do autor.
+  Teste t de uma amostra segue como candidato a próximo degrau;
+  a sequência será calibrada com o autor. Ajustar comentários,
+  seções e saídas à análise, sem acrescentar etapas apenas para imitar a regressão.
+  Nos próximos roteiros, siga uma organização semelhante: etapas numeradas,
+  objetos com nomes claros, cálculos visíveis e comentários breves explicando
+  decisões e operações menos familiares, sem abstrações desnecessárias.
+  Ao concluir cada análise, depois de implementar e validar o funcionamento,
+  apresente o script ao autor e solicite sua revisão didática: um iniciante
+  consegue acompanhar o código com algum esforço? Um professor consegue
+  explicá-lo com facilidade? Esta revisão foi solicitada pelo próprio autor;
+  não é uma autorização prévia para executar o trabalho.
+  Na formatação dos gráficos, use quebras de linha nos mapeamentos de dados
+  (especialmente `.data[[...]]`), em `geom_ribbon()`, `geom_smooth()` e `geom_text()`.
+  Mantenha compactas as chamadas usuais e simples, como `labs()`, `geom_line()`,
+  `geom_point()`, `geom_hline()` e `geom_vline()`; não aplique mecanicamente
+  um argumento por linha a todas as funções.
 
 ## Imported Claude Cowork project instructions

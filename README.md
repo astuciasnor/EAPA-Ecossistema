@@ -8,7 +8,8 @@ A pasta-mãe está em `D:\Claude\EAPA-Ecossistema`.
 - `CATALYSER/` — IDE Shiny e fonte da verdade das análises.
 - `EAPA/` — livro Quarto.
 - `EAPADados/` — pacote R de dados de contexto.
-- `EAPACaderno/` — projeto-modelo de análise em R.
+- `EAPACadernos/` — coleção de projetos-modelo de análise em R, um por análise
+  e conjunto de dados.
 - `ATIVIDADES/` — avaliação por aprendizagem ativa, com dados externos e rubricas.
 
 Cada projeto mantém seu próprio repositório Git. O Git da raiz será dedicado
@@ -24,6 +25,9 @@ As atividades ficam em [ATIVIDADES](ATIVIDADES/README.md), para acesso direto.
 - Guia de mapas: [APOIO/mapas.md](APOIO/mapas.md).
 - Windows Sandbox: `APOIO/sandbox-catalyser.wsb`.
 - Scripts: [APOIO/scripts/README.md](APOIO/scripts/README.md).
+- Skill para orientar a criação e revisão dos projetos R:
+  [eapa-projetos-analise](skills/eapa-projetos-analise/SKILL.md), baseada no
+  roteiro didático da regressão e adaptável às particularidades de cada análise.
 
 O arquivo histórico, temporários e artefatos locais de homologação são preservados
 no disco e ignorados pelo Git da raiz. Repositório da raiz: https://github.com/astuciasnor/EAPA-Ecossistema (branch `main`).

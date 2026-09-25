@@ -7,6 +7,15 @@
 !/EAPA-Ecossistema.Rproj
 !/APOIO/
 !/ATIVIDADES/
+!/skills/
+/skills/*
+!/skills/eapa-projetos-analise/
+!/EAPACadernos/
+/EAPACadernos/*
+!/EAPACadernos/README.md
+!/EAPACadernos/
+/EAPACadernos/*
+!/EAPACadernos/README.md
 
 # Arquivos locais do R e do RStudio.
 .Rproj.user/
@@ -33,3 +42,11 @@ __pycache__/
 # Arquivos de bloqueio de documentos abertos.
 .~lock.*#
 ~$*
+
+# Sub-repositorios independentes (versionados nos proprios repos)
+/CATALYSER/
+/EAPA/
+/EAPADados/
+# Script auxiliar de envio (nao versionar)
+/enviar_ao_github.R
+**/node_modules/

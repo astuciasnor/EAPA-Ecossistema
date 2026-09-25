@@ -21,12 +21,35 @@ Legenda: ✅ tem · ⚠️ parcial/a confirmar · ❌ não/teórico.
 
 | Análise (IDE) | Dataset no EAPADados? | Nome do dataset | Atividade? |
 |---|---|---|---|
-| Correlação (Pearson/Spearman) *(candidato v1)* | ⚠️ a definir canônico | ex.: `camarao_vannamei_biometria` | ❌ |
+| Correlação (Pearson/Spearman) *(candidato v1)* | ✅ | `morfometria_barbo` (mesmo par da regressão) | ❌ |
 | Descobrir o modelo | ✅ usa vários | — | ❌ |
-| Linear simples | ✅ | `camarao_vannamei_biometria`; `cangulo_crescimento` | ✅ **#9 otólito × comprimento** |
+| Linear simples | ✅ | **`morfometria_barbo`** (canônico); `crabs_morfometria`; `cangulo_crescimento` | ✅ **#9 otólito × comprimento** |
 | Logística | ⚠️ a confirmar | sem dataset dedicado claro | ❌ |
 | Não linear (crescimento: von Bertalanffy etc.) | ✅ | `cangulo_crescimento`; `tilapia_crescimento` | ❌ |
 | Linear múltipla *(em dev)* | ✅ | `truta_riacho_crescimento`; `tilapia_microalgas` | ✅ **#10 mercúrio (Great Slave Lake)** |
+
+**Canônico da regressão linear simples: `morfometria_barbo`** (15/09/2026). Recorte
+de *Barbus petenyi* (Bánó & Takács, 2022; CC BY 4.0), 100 indivíduos em cinco
+populações de 20, **sem valor ausente**. O par canônico é
+`comprimento_cabeca ~ distancia_pre_peitoral`: R² = 0,897, Shapiro *p* = 0,44,
+Breusch-Pagan *p* = 0,43, sem curvatura (*p* = 0,63), Cook máximo 0,10. É o
+**único** conjunto do pacote que passa os três testes ao mesmo tempo. As cinco
+populações cobrem faixas de comprimento **sobrepostas** (27–36 mm), então agrupar
+não confunde tamanho com grupo — ao contrário do camarão. *Atenção:* as medidas já
+foram corrigidas alometricamente pelo comprimento padrão, então a inclinação
+descreve associação entre medidas de forma, não crescimento.
+
+**`crabs_morfometria` foi avaliado e não adotado** (15/09/2026), apesar de ter duas
+categorias balanceadas de 100 (`forma_cor`) e retas com R² de 0,985 e 0,980: o
+Shapiro rejeita no modelo global (*p* = 0,0009) e dentro do grupo laranja
+(*p* = 0,0016), e há curvatura na laranja (*p* = 0,013). Fica como conjunto de
+amostragem e como alternativa para comparar **retas por grupo**.
+
+**`camarao_vannamei_biometria` não é canônico da regressão** e serve de exemplo de
+**diagnóstico e influência**: `lm(peso_g ~ comprimento_cm)` tem R² = 0,899 com
+Shapiro *p* = 8,3 × 10⁻⁶, Cook máximo 1,38 (limite 4/n = 0,024), lacuna entre 9 e
+10 cm e origem confundida com o tamanho (o viveiro acadêmico cobre só
+7,25–9,00 cm). É o caso que ensina quando **não** usar a reta.
 
 ## Testes paramétricos
 

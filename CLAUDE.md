@@ -5,6 +5,21 @@ separadamente e estão sendo **entrosados**. A espinha do ecossistema é a IDE
 **CatalyseR**. Use este arquivo como contexto permanente ao trabalhar em qualquer
 um deles.
 
+## Skill dos projetos de análise — convenção atual (19/09/2026)
+
+Para criar, adaptar ou revisar projetos de análise do EAPACadernos, leia
+[eapa-projetos-analise](skills/eapa-projetos-analise/SKILL.md).
+O caminho atual da coleção é `EAPACadernos/`, no plural; a referência didática
+é `EAPACadernos/linear-morfometria-barbo/`. A organização atual usa um
+`R/analise.R` como fonte dos cálculos, funções de apresentação e dois QMDs que
+executam o mesmo script: HTML completo e Word de artigo. Os relatórios usam
+objetos em memória, não as cópias CSV/PNG de `saida/`.
+
+Essa decisão substitui as descrições históricas abaixo de um único QMD,
+sincronização de chunks e ausência de `saida/` para os novos projetos desta
+família. A skill orienta adaptação por método, didática e validação; fica fora
+das pastas dos alunos. Sua criação não migra o exportador nem a pasta ANOVA.
+
 ## Estrutura de pastas
 
 ```

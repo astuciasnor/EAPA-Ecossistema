@@ -4,6 +4,7 @@
 # Altere o modo para "github" ao preparar este arquivo para um aluno.
 
 modo_instalacao <- "local"
+ide_ja_carregada <- "catalyser" %in% loadedNamespaces()
 
 if (identical(modo_instalacao, "local")) {
   # Usa a pasta local e as dependências já instaladas neste computador.
@@ -36,4 +37,9 @@ cat("Arquivo da aplicação:", caminho_app, "\n")
 cat("Data do arquivo:", format(file.info(caminho_app)$mtime), "\n")
 
 # Abre a CatalyseR no navegador.
-catalyser::run_app(launch.browser = TRUE)
+if (ide_ja_carregada) {
+  cat("Reinicie o R: Session > Restart R (Ctrl+Shift+F10).\n")
+  cat("Depois execute catalyser::run_app(launch.browser = TRUE).\n")
+} else {
+  catalyser::run_app(launch.browser = TRUE)
+}

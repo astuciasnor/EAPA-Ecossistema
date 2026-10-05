@@ -25,3 +25,7 @@ aponta para as pastas de transferência e saída deste diretório.
 Os quatro projetos e `ATIVIDADES/` ficam um nível acima. Ao usar um caminho relativo em um
 arquivo movido, considere a nova localização. Os arquivos históricos e os
 pacotes de transferência preservam os caminhos registrados na época.
+
+Padrão aprovado: [Transparência estatística e beleza dos dados](documentacao/TRANSPARENCIA_E_BELEZA_DOS_DADOS.md), com a representação de médias, observações, DP e IC adotada na CatalyseR.
+
+Entrega atual: [CatalyseR 0.1.14 — versão unificada](documentacao/ENTREGA_CATALYSER_0.1.14.md). Para abrir a principal após reiniciar o R: `source("D:/Claude/EAPA-Ecossistema/APOIO/scripts/abrir_catalyser_principal.R")`.

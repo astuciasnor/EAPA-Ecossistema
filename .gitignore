@@ -10,12 +10,8 @@
 !/skills/
 /skills/*
 !/skills/eapa-projetos-analise/
-!/EAPACadernos/
-/EAPACadernos/*
-!/EAPACadernos/README.md
-!/EAPACadernos/
-/EAPACadernos/*
-!/EAPACadernos/README.md
+# Cadernos sao repositorios proprios; nao versionar dentro do raiz
+/EAPACadernos/
 
 # Arquivos locais do R e do RStudio.
 .Rproj.user/
@@ -50,3 +46,23 @@ __pycache__/
 # Script auxiliar de envio (nao versionar)
 /enviar_ao_github.R
 **/node_modules/
+
+# node_modules as vezes e link simbolico (npm/pnpm): sem barra pega link e pasta
+node_modules
+**/node_modules
+# Artefato zip solto em APOIO
+/APOIO/descritiva-barbo.zip
+
+# Pacotes de distribuição e entregas da CatalyseR (grandes; vão para GitHub Releases, não para o git)
+/APOIO/CatalyseR-Windows-*
+/APOIO/CatalyseR-avaliacao-*
+/APOIO/entrega-avaliacao-*/
+/APOIO/**/*.zip
+# Teste de instalação: biblioteca instalada e cópia da fonte, gerados a cada teste
+/APOIO/teste-instalacao-sem-rtools/
+# Logs e renderizações usados só para conferência
+/APOIO/**/*.log
+/APOIO/*_log.txt
+/APOIO/**/word-render/
+/APOIO/revisao-planejamento-transversal/pagina-*.png
+/APOIO/revisao-planejamento-transversal/verificacao.pdf

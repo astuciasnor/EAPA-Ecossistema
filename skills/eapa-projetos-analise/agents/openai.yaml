@@ -1,0 +1,4 @@
+interface:
+  display_name: "Projetos de análise EAPA"
+  short_description: "Projetos R didáticos, reprodutíveis e legíveis"
+  default_prompt: "Use $eapa-projetos-analise para criar ou revisar um projeto R com script didático central e dois relatórios, adaptando dados, pressupostos e resultados à análise solicitada."

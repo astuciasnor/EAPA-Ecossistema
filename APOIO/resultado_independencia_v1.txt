@@ -1,0 +1,5 @@
+test_observacional_longitudinal.R: FALHOU: nrow(tab) == 24L is not TRUE
+test_observacional_gradiente.R: FALHOU: all(tab$pool == 3L) is not TRUE
+test_observacional_impacto.R: PASSOU
+test_monitoramento.R: PASSOU
+test_transversal_saidas.R: PASSOU

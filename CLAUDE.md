@@ -41,6 +41,9 @@ exportado tem **um só QMD**, por decisão do professor:
 - a base nasce da planilha numa só cadeia com pipe, até `base`; no lugar da
   fotografia `.rds`, o script traz um **carimbo** (linhas, contagem e média por
   grupo que a tela mostrou) e `stopifnot()` só no número de linhas;
+- `dados/` guarda só a planilha, sem subpastas `brutos/` e `processados/`; a
+  cópia da base para o Excel é gravada pelo script em `saida/tabelas/base.csv`,
+  refeita a cada execução (nunca como abas dentro da planilha bruta);
 - a ClaRa viaja em `R/clara/`; o projeto só precisa de pacotes do CRAN.
 
 Isso é uma divergência deliberada da convenção de dois QMDs acima, válida só

@@ -31,7 +31,9 @@ dinâmicos), e `relatorios/relatorio.qmd` é o relatório Word, cujos chunks
 repetem as chamadas da ClaRa e rodam sozinhos. Não há caderno HTML. A base
 nasce da planilha numa só cadeia com pipe, até `base`, conferida por um
 carimbo (linhas, contagem e média por grupo da tela) em vez de fotografia
-`.rds`; a ClaRa viaja em `R/clara/` e o projeto só precisa do CRAN. É uma
+`.rds`; `dados/` guarda só a planilha (sem `brutos/` nem `processados/`), e a
+cópia da base sai do script em `saida/tabelas/base.csv`; a ClaRa viaja em
+`R/clara/` e o projeto só precisa do CRAN. É uma
 divergência deliberada da convenção de dois QMDs, só para a rota ClaRa; não
 "corrigir" de volta. Mais resultados, se preciso, entram como apêndice no Word.
 

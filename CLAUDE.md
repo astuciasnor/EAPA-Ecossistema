@@ -20,6 +20,33 @@ sincronização de chunks e ausência de `saida/` para os novos projetos desta
 família. A skill orienta adaptação por método, didática e validação; fica fora
 das pastas dos alunos. Sua criação não migra o exportador nem a pasta ANOVA.
 
+## Rota ClaRa do Projeto R exportado — um só QMD (outubro de 2026)
+
+A CatalyseR tem uma opção experimental, "Escrever o código em ClaRa"
+(branch `clara` do repositório da CatalyseR), hoje só para a ANOVA de um fator
+com método clássico. A **ClaRa** (`ClaRa/`, repositório próprio) é um dialeto
+amigável de R: funções em português, uma por pergunta da pesquisa
+(`comparar_medias()`, `grafico_medias()`, `escrever_resultados()`), com o R
+comum visível sob demanda (`mostrar_codigo = TRUE`). Nessa rota, o projeto
+exportado tem **um só QMD**, por decisão do professor:
+
+- `R/analise.R`, em ClaRa (cerca de 170 linhas), é o **caderno de estudo**:
+  receita de preparo, exploração, análise, diagnósticos e textos dinâmicos;
+- `relatorios/relatorio.qmd` é o **relatório**, que vira Word, com os
+  resultados do artigo ou da tese (tabela da ANOVA, resumo por grupo e figura
+  principal). Os chunks repetem as chamadas da ClaRa do script e o documento
+  roda sozinho;
+- não há caderno HTML: com a ClaRa, ele só repetiria o script, e dois lugares
+  para o mesmo resultado confundem alunos e professores;
+- a base nasce da planilha numa só cadeia com pipe, até `base`; no lugar da
+  fotografia `.rds`, o script traz um **carimbo** (linhas, contagem e média por
+  grupo que a tela mostrou) e `stopifnot()` só no número de linhas;
+- a ClaRa viaja em `R/clara/`; o projeto só precisa de pacotes do CRAN.
+
+Isso é uma divergência deliberada da convenção de dois QMDs acima, válida só
+para a rota ClaRa; não "corrigir" de volta. Se uma análise pedir mais
+resultados no documento, a saída combinada é um apêndice no próprio Word.
+
 ## Estrutura de pastas
 
 ```

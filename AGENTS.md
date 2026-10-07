@@ -21,6 +21,20 @@ históricas abaixo de um único QMD, sincronização de chunks e ausência de
 caráter didático e orienta a validação e a revisão do autor. Ela fica fora das
 pastas dos alunos. Sua criação não migra o exportador nem a pasta ANOVA.
 
+## Rota ClaRa do Projeto R exportado — um só QMD (outubro de 2026)
+
+Na opção experimental "Escrever o código em ClaRa" da CatalyseR (branch
+`clara`; hoje só ANOVA de um fator com método clássico), o projeto exportado
+tem **um só QMD**, por decisão do professor: `R/analise.R`, em ClaRa, é o
+caderno de estudo (receita, exploração, análise, diagnósticos e textos
+dinâmicos), e `relatorios/relatorio.qmd` é o relatório Word, cujos chunks
+repetem as chamadas da ClaRa e rodam sozinhos. Não há caderno HTML. A base
+nasce da planilha numa só cadeia com pipe, até `base`, conferida por um
+carimbo (linhas, contagem e média por grupo da tela) em vez de fotografia
+`.rds`; a ClaRa viaja em `R/clara/` e o projeto só precisa do CRAN. É uma
+divergência deliberada da convenção de dois QMDs, só para a rota ClaRa; não
+"corrigir" de volta. Mais resultados, se preciso, entram como apêndice no Word.
+
 ## Estrutura de pastas
 
 ```

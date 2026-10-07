@@ -55,6 +55,15 @@ em seu primeiro chunk, oculto com `include: false`. Os demais chunks exibem
 objetos em memória. Cada Render refaz a análise; os documentos não compartilham
 uma sessão nem dependem do Environment que ficou aberto no RStudio.
 
+**Exceção: a rota ClaRa da CatalyseR (outubro de 2026).** Quando o Projeto R
+exportado é escrito em ClaRa (funções em português, uma por pergunta), ele tem
+um só QMD, `relatorios/relatorio.qmd`, que vira Word e repete as chamadas da
+ClaRa sem dar `source()` no script. O `R/analise.R`, curto, é o caderno de
+estudo, e não há HTML. A base nasce da planilha numa só cadeia até `base`,
+conferida por um carimbo da tela, sem `.rds`. Esta skill continua valendo para
+os projetos do EAPACadernos e para a rota sem ClaRa; não aplique os dois QMDs
+à rota ClaRa (decisão do professor).
+
 As análises canônicas do ecossistema vêm da CatalyseR. Dentro de cada projeto
 autônomo, a implementação executável fica em `analise.R`. Ao transpor uma
 análise existente, confira a base efetiva e as escolhas do módulo canônico;

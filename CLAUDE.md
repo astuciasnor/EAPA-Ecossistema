@@ -1,5 +1,17 @@
 # EAPA — Ecossistema de Estatística Aplicada à Pesca e Aquicultura
 
+## Nome novo da IDE: Trilha (decisão de 8/10/2026)
+
+A **CatalyseR passa a se chamar Trilha**, e o pacote R, **`trilha`**: uma
+trilha de análise, da pergunta ao relatório, com jeito de estúdio de
+pesquisa, análise e escrita, sem "Studio" no nome. Na prosa e na interface,
+"Trilha"; no código, `trilha`. Não usar "TrilhaR", "Trilha do R" nem "Trilha
+Studio". O renome no código **ainda não foi feito**: até lá, "CatalyseR" e
+`catalyser` neste arquivo e nos repositórios valem como o nome antigo da
+mesma ferramenta. Plano em `CATALYSER/docs/PLANO_TRILHA.md`. O repositório
+continua em `astuciasnor/catalyser`; a transferência para a conta do Clube
+do Código no GitHub foi decidida, mas fica para depois.
+
 Repositório-mãe (em `D:\Claude\EAPA-Ecossistema`) de **quatro subprojetos** que evoluíram
 separadamente e estão sendo **entrosados**. A espinha do ecossistema é a IDE
 **CatalyseR**. Use este arquivo como contexto permanente ao trabalhar em qualquer
@@ -23,8 +35,10 @@ das pastas dos alunos. Sua criação não migra o exportador nem a pasta ANOVA.
 ## Rota ClaRa do Projeto R exportado — um só QMD (outubro de 2026)
 
 A CatalyseR tem uma opção experimental, "Escrever o código em ClaRa"
-(branch `clara` do repositório da CatalyseR), hoje só para a ANOVA de um fator
-com método clássico. A **ClaRa** (`ClaRa/`, repositório próprio) é um dialeto
+(branch `clara` do repositório da CatalyseR), hoje só para a ANOVA de um fator,
+nos três métodos da tela (clássica com Tukey, Welch com Games-Howell e
+automático, que sai escrito como `variancias_iguais = TRUE` ou `FALSE`
+conforme o Levene da tela; a ClaRa nunca escolhe o teste sozinha). A **ClaRa** (`ClaRa/`, repositório próprio) é um dialeto
 amigável de R: funções em português, uma por pergunta da pesquisa
 (`comparar_medias()`, `grafico_medias()`, `escrever_resultados()`), com o R
 comum visível sob demanda (`mostrar_codigo = TRUE`). Nessa rota, o projeto

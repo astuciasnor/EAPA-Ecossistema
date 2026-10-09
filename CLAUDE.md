@@ -6,11 +6,26 @@ A **CatalyseR passa a se chamar Trilha**, e o pacote R, **`trilha`**: uma
 trilha de análise, da pergunta ao relatório, com jeito de estúdio de
 pesquisa, análise e escrita, sem "Studio" no nome. Na prosa e na interface,
 "Trilha"; no código, `trilha`. Não usar "TrilhaR", "Trilha do R" nem "Trilha
-Studio". O renome no código **ainda não foi feito**: até lá, "CatalyseR" e
-`catalyser` neste arquivo e nos repositórios valem como o nome antigo da
-mesma ferramenta. Plano em `CATALYSER/docs/PLANO_TRILHA.md`. O repositório
-continua em `astuciasnor/catalyser`; a transferência para a conta do Clube
-do Código no GitHub foi decidida, mas fica para depois.
+Studio". Plano em `TRILHA/docs/PLANO_TRILHA.md`. "CatalyseR" e `catalyser`
+neste arquivo valem como o nome antigo da mesma ferramenta.
+
+**Dois repositórios, duas pastas (desde 9/10/2026):**
+
+| Pasta local | GitHub | Pacote | Para quem |
+|---|---|---|---|
+| `TRILHA/` | `cluberufpa/trilha` (público) | `trilha` (0.2.x) | o desenvolvimento: é aqui que se trabalha |
+| `CATALYSER/` | `astuciasnor/catalyser` | `catalyser` (0.1.x) | os alunos do semestre, até a Trilha substituí-la |
+
+- Mudança nova nasce na `TRILHA/` (branch `main`) e vai para `cluberufpa/trilha`.
+- A `CATALYSER/` (branch `main`) só recebe o que os alunos precisam agora,
+  copiado da `TRILHA/` com `git cherry-pick` e sem o renome; a cada envio
+  sobe a versão 0.1.x. A branch `trilha` da `CATALYSER/` está aposentada.
+- Mudança na ClaRa: no repositório `ClaRa/` (`cluberufpa/ClaRa`) e copiada
+  para `inst/app/templates/clara/` nas duas pastas.
+- Instalar a Trilha: `source("https://raw.githubusercontent.com/cluberufpa/trilha/main/instalar_trilha.R")`,
+  abrir com `trilha::run_app()`. Instalar a CatalyseR: o mesmo com
+  `astuciasnor/catalyser/main/instalar_catalyser.R` e `catalyser::run_app()`.
+- O EAPADados continua em `astuciasnor/EAPADados`.
 
 Repositório-mãe (em `D:\Claude\EAPA-Ecossistema`) de **quatro subprojetos** que evoluíram
 separadamente e estão sendo **entrosados**. A espinha do ecossistema é a IDE
@@ -68,7 +83,9 @@ resultados no documento, a saída combinada é um apêndice no próprio Word.
 
 ```
 EAPA-Ecossistema/              (pasta-mãe — D:\Claude\EAPA-Ecossistema)
-├── catalyser/                 # IDE Shiny CatalyseR — FONTE DA VERDADE das análises
+├── TRILHA/                    # IDE Shiny Trilha (pacote trilha) — FONTE DA VERDADE das análises
+├── CATALYSER/                 # a mesma IDE como catalyser, para os alunos (ver tabela acima)
+├── ClaRa/                     # dialeto amigável de R (cluberufpa/ClaRa)
 ├── eapa/                      # Livro Quarto (repo: astuciasnor/eapa + GitHub Pages)
 ├── EAPADados/                 # pacote R — DADOS de contexto
 ├── EAPACaderno/    # 4º subprojeto (set/2026) — projeto-modelo de análise em R, "a pé"
@@ -86,7 +103,9 @@ EAPA-Ecossistema/              (pasta-mãe — D:\Claude\EAPA-Ecossistema)
 - **Livro:** https://github.com/astuciasnor/eapa · Pages: https://astuciasnor.github.io/eapa/
 - **EAPADados:** https://github.com/astuciasnor/EAPADados
 - **EAPACaderno:** https://github.com/astuciasnor/EAPACaderno (repositório próprio desde set/2026)
-- **CatalyseR:** repositório local (ainda não publicado).
+- **Trilha:** https://github.com/cluberufpa/trilha (pacote `trilha`; onde se desenvolve)
+- **CatalyseR:** https://github.com/astuciasnor/catalyser (pacote `catalyser`; versão dos alunos)
+- **ClaRa:** https://github.com/cluberufpa/ClaRa
 
 ## Princípio central
 

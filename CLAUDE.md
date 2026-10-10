@@ -93,9 +93,14 @@ exportado tem **um só QMD**, por decisão do professor:
   `exportacao_anova_clara_chamada()`, a mesma função que escreve a chamada
   no `analise.R` e no relatório, avalia o texto com o pacote `clara` e mostra
   as tabelas e figuras da ClaRa. No automático, a tela escolhe pelo Levene e
-  a escolha vai escrita em `variancias_iguais`. Com dois grupos, a ClaRa faz
-  o teste t; o projeto desse caso ainda sai pelo molde da ANOVA (mesmo p),
-  até o teste t ganhar a sua rota ClaRa.
+  a escolha vai escrita em `variancias_iguais`. Com dois grupos, a tela da
+  ANOVA faz o teste t, e o projeto sai pela rota ClaRa do teste t;
+- **teste t de duas amostras em ClaRa** (10/10/2026, ClaRa 0.11.0): a tela
+  do teste t e o molde `TRILHA/inst/app/templates/teste_t_clara/` usam
+  `exportacao_teste_t_clara_chamada()`, com a hipótese alternativa escrita
+  (`alternativa = "bilateral"`, `"maior"` ou `"menor"`; a unilateral só
+  existe com dois grupos). Uma amostra e pareado não existem na ClaRa e
+  seguem no caminho antigo.
 
 Isso é uma divergência deliberada da convenção de dois QMDs acima, válida só
 para a rota ClaRa; não "corrigir" de volta. Se uma análise pedir mais

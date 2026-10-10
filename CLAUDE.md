@@ -72,7 +72,13 @@ exportado tem **um só QMD**, por decisão do professor:
 - `dados/` guarda só a planilha, sem subpastas `brutos/` e `processados/`; a
   cópia da base para o Excel é gravada pelo script em `saida/tabelas/base.csv`,
   refeita a cada execução (nunca como abas dentro da planilha bruta);
-- a ClaRa viaja em `R/clara/`; o projeto só precisa de pacotes do CRAN.
+- a ClaRa é o pacote `clara` (desde 9/10/2026, `cluberufpa/ClaRa`,
+  público): o projeto carrega `library(clara)` e precisa só de pacotes do
+  CRAN e da `clara` (instalada do GitHub até entrar no CRAN); a cópia em
+  `R/clara/` sai na Fase 2 de `TRILHA/docs/PLANO_TRILHA_E_CLARA.md`;
+- as tabelas do relatório saem de `exibir_teste()` e `exibir_resumo()`.
+  Convenção de nomes: `exibir_*` recebe um resultado pronto e devolve a
+  tabela; "mostrar" fica para o código (`mostrar_codigo = TRUE`).
 
 Isso é uma divergência deliberada da convenção de dois QMDs acima, válida só
 para a rota ClaRa; não "corrigir" de volta. Se uma análise pedir mais

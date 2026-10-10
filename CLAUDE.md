@@ -88,9 +88,14 @@ exportado tem **um só QMD**, por decisão do professor:
 - o teste `TRILHA/inst/app/tests/test_clara_projeto_render.R` gera o projeto
   de cada análise com rota ClaRa, roda o `analise.R` numa sessão limpa e
   renderiza o Word; é o critério que aprova uma análise nessa rota;
-- a tela da ANOVA ainda calcula por conta própria (`calcular_anova()`); a
-  troca pela chamada da ClaRa espera a decisão do professor sobre as
-  diferenças anotadas no andamento da Fase 2 do plano.
+- **a chamada que a tela roda é a que o projeto escreve** (10/10/2026): a
+  tela da ANOVA de um fator monta `comparar_medias(...)` com
+  `exportacao_anova_clara_chamada()`, a mesma função que escreve a chamada
+  no `analise.R` e no relatório, avalia o texto com o pacote `clara` e mostra
+  as tabelas e figuras da ClaRa. No automático, a tela escolhe pelo Levene e
+  a escolha vai escrita em `variancias_iguais`. Com dois grupos, a ClaRa faz
+  o teste t; o projeto desse caso ainda sai pelo molde da ANOVA (mesmo p),
+  até o teste t ganhar a sua rota ClaRa.
 
 Isso é uma divergência deliberada da convenção de dois QMDs acima, válida só
 para a rota ClaRa; não "corrigir" de volta. Se uma análise pedir mais

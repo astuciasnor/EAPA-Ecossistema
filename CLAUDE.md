@@ -48,11 +48,13 @@ das pastas dos alunos. Sua criação não migra o exportador nem a pasta ANOVA.
 
 ## Rota ClaRa do Projeto R exportado — um só QMD (outubro de 2026)
 
-A CatalyseR tem uma opção experimental, "Escrever o código em ClaRa"
-(branch `clara` do repositório da CatalyseR), hoje só para a ANOVA de um fator,
-nos três métodos da tela (clássica com Tukey, Welch com Games-Howell e
-automático, que sai escrito como `variancias_iguais = TRUE` ou `FALSE`
-conforme o Levene da tela; a ClaRa nunca escolhe o teste sozinha). A **ClaRa** (`ClaRa/`, repositório próprio) é um dialeto
+Na Trilha, a ANOVA de um fator (nos três métodos da tela: clássica com Tukey,
+Welch com Games-Howell e automático, que sai escrito como
+`variancias_iguais = TRUE` ou `FALSE` conforme o Levene da tela; a ClaRa
+nunca escolhe o teste sozinha) e o teste t de duas amostras saem **sempre em
+ClaRa**: desde a Fase 3 (10/10/2026) não há mais a caixa "Escrever o código
+em ClaRa (experimental)" nem os moldes antigos dessas duas análises. As
+demais análises ainda saem pelos moldes antigos. A **ClaRa** (`ClaRa/`, repositório próprio) é um dialeto
 amigável de R: funções em português, uma por pergunta da pesquisa
 (`comparar_medias()`, `grafico_medias()`, `escrever_resultados()`), com o R
 comum visível sob demanda (`mostrar_codigo = TRUE`). Nessa rota, o projeto

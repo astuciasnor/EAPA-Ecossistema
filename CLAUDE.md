@@ -54,7 +54,8 @@ Welch com Games-Howell e automático, que sai escrito como
 nunca escolhe o teste sozinha) e o teste t de duas amostras saem **sempre em
 ClaRa**: desde a Fase 3 (10/10/2026) não há mais a caixa "Escrever o código
 em ClaRa (experimental)" nem os moldes antigos dessas duas análises. As
-demais análises ainda saem pelos moldes antigos. A **ClaRa** (`ClaRa/`, repositório próprio) é um dialeto
+demais análises ainda saem pelos moldes antigos, menos a regressão linear
+simples com uma reta só, que também sai em ClaRa (ver abaixo). A **ClaRa** (`ClaRa/`, repositório próprio) é um dialeto
 amigável de R: funções em português, uma por pergunta da pesquisa
 (`comparar_medias()`, `grafico_medias()`, `escrever_resultados()`), com o R
 comum visível sob demanda (`mostrar_codigo = TRUE`). Nessa rota, o projeto
@@ -75,7 +76,7 @@ exportado tem **um só QMD**, por decisão do professor:
   cópia da base para o Excel é gravada pelo script em `saida/tabelas/base.csv`,
   refeita a cada execução (nunca como abas dentro da planilha bruta);
 - a ClaRa é o pacote `clara` (desde 9/10/2026, `cluberufpa/ClaRa`,
-  público), que a Trilha declara em `Imports` (`clara (>= 0.10.0)`): o
+  público), que a Trilha declara em `Imports` (`clara (>= 0.12.0)`): o
   `analise.R` e o `relatorio.qmd` carregam `library(clara)`, e o projeto
   precisa só de pacotes do CRAN e da `clara` (instalada do GitHub até entrar
   no CRAN; o README do projeto diz a versão usada na exportação e como
@@ -102,7 +103,16 @@ exportado tem **um só QMD**, por decisão do professor:
   `exportacao_teste_t_clara_chamada()`, com a hipótese alternativa escrita
   (`alternativa = "bilateral"`, `"maior"` ou `"menor"`; a unilateral só
   existe com dois grupos). Uma amostra e pareado não existem na ClaRa e
-  seguem no caminho antigo.
+  seguem no caminho antigo;
+- **regressão linear simples em ClaRa** (10/10/2026, ClaRa 0.12.0, Trilha
+  0.2.3): com "Linear (reta)" e uma reta só, a tela da regressão e o molde
+  `TRILHA/inst/app/templates/regressao_clara/` usam
+  `exportacao_regressao_clara_chamada()`, que escreve
+  `relacionar_variaveis(resposta, preditor, ..., avaliar_autocorrelacao)`; a
+  figura principal é `grafico_reta()`, e o grupo da tela só colore os pontos
+  (`colorir_por`). O carimbo da regressão traz as linhas e as médias da
+  resposta e do preditor. Retas por grupo, potência e Von Bertalanffy seguem
+  no molde antigo `regressao_linear`.
 
 Isso é uma divergência deliberada da convenção de dois QMDs acima, válida só
 para a rota ClaRa; não "corrigir" de volta. Se uma análise pedir mais

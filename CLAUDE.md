@@ -73,12 +73,24 @@ exportado tem **um só QMD**, por decisão do professor:
   cópia da base para o Excel é gravada pelo script em `saida/tabelas/base.csv`,
   refeita a cada execução (nunca como abas dentro da planilha bruta);
 - a ClaRa é o pacote `clara` (desde 9/10/2026, `cluberufpa/ClaRa`,
-  público): o projeto carrega `library(clara)` e precisa só de pacotes do
-  CRAN e da `clara` (instalada do GitHub até entrar no CRAN); a cópia em
-  `R/clara/` sai na Fase 2 de `TRILHA/docs/PLANO_TRILHA_E_CLARA.md`;
-- as tabelas do relatório saem de `exibir_teste()` e `exibir_resumo()`.
+  público), que a Trilha declara em `Imports` (`clara (>= 0.10.0)`): o
+  `analise.R` e o `relatorio.qmd` carregam `library(clara)`, e o projeto
+  precisa só de pacotes do CRAN e da `clara` (instalada do GitHub até entrar
+  no CRAN; o README do projeto diz a versão usada na exportação e como
+  instalá-la). Desde a Fase 2 (9/10/2026) o projeto **não leva `R/clara/`
+  nem `R/funcoes.R`**: em `R/` fica só o `analise.R`. Se a receita de
+  preparo usar `moda()` ou `converter_datas()`, a definição delas vai no
+  próprio roteiro e no relatório, antes da receita;
+- as tabelas do relatório saem de `resultado |> exibir_teste()` e
+  `resultado |> exibir_resumo(casas = casas, nota = textos$nota_tabela)`.
   Convenção de nomes: `exibir_*` recebe um resultado pronto e devolve a
-  tabela; "mostrar" fica para o código (`mostrar_codigo = TRUE`).
+  tabela; "mostrar" fica para o código (`mostrar_codigo = TRUE`);
+- o teste `TRILHA/inst/app/tests/test_clara_projeto_render.R` gera o projeto
+  de cada análise com rota ClaRa, roda o `analise.R` numa sessão limpa e
+  renderiza o Word; é o critério que aprova uma análise nessa rota;
+- a tela da ANOVA ainda calcula por conta própria (`calcular_anova()`); a
+  troca pela chamada da ClaRa espera a decisão do professor sobre as
+  diferenças anotadas no andamento da Fase 2 do plano.
 
 Isso é uma divergência deliberada da convenção de dois QMDs acima, válida só
 para a rota ClaRa; não "corrigir" de volta. Se uma análise pedir mais

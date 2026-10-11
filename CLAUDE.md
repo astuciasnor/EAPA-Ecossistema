@@ -55,7 +55,7 @@ nunca escolhe o teste sozinha) e o teste t de duas amostras saem **sempre em
 ClaRa**: desde a Fase 3 (10/10/2026) não há mais a caixa "Escrever o código
 em ClaRa (experimental)" nem os moldes antigos dessas duas análises. As
 demais análises ainda saem pelos moldes antigos, menos a regressão linear
-simples com uma reta só e o Mann-Whitney, que também saem em ClaRa (ver abaixo). A **ClaRa** (`ClaRa/`, repositório próprio) é um dialeto
+simples com uma reta só, o Mann-Whitney e o Kruskal-Wallis, que também saem em ClaRa (ver abaixo). A **ClaRa** (`ClaRa/`, repositório próprio) é um dialeto
 amigável de R: funções em português, uma por pergunta da pesquisa
 (`comparar_medias()`, `grafico_medias()`, `escrever_resultados()`), com o R
 comum visível sob demanda (`mostrar_codigo = TRUE`). Nessa rota, o projeto
@@ -76,7 +76,7 @@ exportado tem **um só QMD**, por decisão do professor:
   cópia da base para o Excel é gravada pelo script em `saida/tabelas/base.csv`,
   refeita a cada execução (nunca como abas dentro da planilha bruta);
 - a ClaRa é o pacote `clara` (desde 9/10/2026, `cluberufpa/ClaRa`,
-  público), que a Trilha declara em `Imports` (`clara (>= 0.13.0)`): o
+  público), que a Trilha declara em `Imports` (`clara (>= 0.14.0)`): o
   `analise.R` e o `relatorio.qmd` carregam `library(clara)`, e o projeto
   precisa só de pacotes do CRAN e da `clara` (instalada do GitHub até entrar
   no CRAN; o README do projeto diz a versão usada na exportação e como
@@ -118,8 +118,8 @@ exportado tem **um só QMD**, por decisão do professor:
   ao Projeto R") e o molde `TRILHA/inst/app/templates/medianas_clara/` usam
   `exportacao_medianas_clara_chamada()`, que escreve
   `comparar_medianas(..., alternativa = "bilateral" | "maior" | "menor")`;
-  a figura principal é `grafico_medianas()`. O molde já serve ao
-  Kruskal-Wallis, que falta ligar.
+  a figura principal é `grafico_medianas()`. O Kruskal-Wallis (11/10/2026,
+  ClaRa 0.14.0) sai pelo mesmo molde, com `ajuste_p = "holm" | "bonferroni" | "bh"` no Dunn, que sempre roda.
 
 Isso é uma divergência deliberada da convenção de dois QMDs acima, válida só
 para a rota ClaRa; não "corrigir" de volta. Se uma análise pedir mais
